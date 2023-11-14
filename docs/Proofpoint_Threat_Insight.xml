@@ -1,0 +1,2663 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom">
+<channel>
+<title>Proofpoint Threat Insight</title>
+<link>https://www.proofpoint.com/us/blog</link>
+
+<item>
+<title>Security Brief: TA571 Delivers IcedID Forked Loader</title>
+<link>https://www.proofpoint.com/us/blog/threat-insight/security-brief-ta571-delivers-icedid-forked-loader</link>
+<guid>https://www.proofpoint.com/us/blog/threat-insight/security-brief-ta571-delivers-icedid-forked-loader</guid>
+<content:encoded><![CDATA[
+<div> TA571, IcedID, Forked variant, campaign, malware<br>
+<br>
+TA571, a spam distributor, launched two campaigns on 11 and 18 October 2023, delivering the Forked variant of IcedID to over 1,200 customers globally. The emails in the campaigns used thread hijacking and contained 404 TDS URLs linking to a password-protected zip archive. Upon opening the VBS script in the zip file, the IcedID Forked loader would run and download the IcedID bot, with the modified variant focusing on payload delivery instead of banking fraud. TA571 uses 404 TDS in their campaigns and is known for high-volume spam email delivery. The use of the Forked IcedID variant is unusual and indicates actor sophistication. Emerging Threats signatures have been identified for this threat, and several Indicators of Compromise have been listed for detection and mitigation purposes.<br><br>Summary: <br>TA571, a sophisticated spam distributor, delivered the Forked variant of IcedID in two campaigns impacting over 1,200 customers globally. The modified variant focuses on payload delivery instead of banking fraud. TA571 is known for using 404 TDS in their campaigns, and several indicators of compromise have been identified for this threat. <div>
+What happened 
+
+Proofpoint researchers identified TA571 delivering the Forked variant of IcedID in two campaigns on 11 and 18 October 2023. Both campaigns included over 6,000 messages, each impacting over 1,200 customers in a variety of industries globally.  
+
+Emails in the campaigns purported to be replies to existing threads. This is known as thread hijacking. The emails contained 404 TDS URLs linking to the download of a password-protected zip archive with the password listed in the email. The attack chain included a series of checks to validate the recipient before delivering the zip archive. 
+
+
+
+TA571 lure used in an IcedID campaign on 11 October 2023.  
+
+The zip file contained a VBS script and a benign text file. The VBS script, if double clicked by the user, ran an embedded IcedID Forked loader with regsvr32. The loader in turn downloaded the IcedID bot.  
+
+The use of the Forked IcedID variant is unusual, as it has only been observed in a small number of campaigns. Proofpoint first identified this variant in February 2023. A key difference between the original IcedID variant and the Forked variant was the removal of banking functionality. At the time, Proofpoint assessed actors were using the modified variants to pivot the malware away from typical banking trojan and banking fraud activity to focus on payload delivery, which likely includes prioritizing ransomware delivery. 
+
+TA571 regularly uses 404 TDS in campaigns to deliver malware, including AsyncRAT, NetSupport, and DarkGate. Proofpoint researchers have been tracking 404 TDS since at least September of 2022, and it is used by a number of threat actors. A traffic distribution system (TDS) is an application used to route web traffic through operator-controlled servers. They can be used by threat actors to redirect traffic to malware downloads and use IP filtering to determine whether to deliver a payload or redirect to a credential harvesting website. Proofpoint assesses 404 TDS is likely shared or sold to other actors due to its involvement in a variety of unrelated phishing and malware campaigns.  
+
+Attribution 
+
+TA571 is a spam distributor, and this actor sends high volume spam email campaigns to deliver and install a variety malware for their cybercriminal customers, depending on the subsequent operator’s objectives. Proofpoint assesses with high confidence that TA571 infections can lead to ransomware.  
+
+Why it matters 
+
+TA571’s delivery of the Forked IcedID variant is unique as Proofpoint does not often observe it in threat data. Additionally, Proofpoint considers TA571 to be a sophisticated cybercriminal threat actor. Its attack chain includes unique filtering using intermediary “gates” for traffic to pass through. These gates, which are intermediary URLs, will filter traffic based on IP and geo-fencing. TA571 may have as many as two gates per campaign. This is to ensure only specifically targeted users receive the malware, and to bypass automated sandboxing or researcher activity. 
+
+Emerging Threats signatures 
+
+2853110 - ETPRO EXPLOIT_KIT 404 TDS Redirect 
+
+2032086 - ET TROJAN Win32/IcedID Request Cookie 
+
+2847335 - ETPRO TROJAN Win32/IcedID Stage2 Checkin 
+
+2032086 - ET TROJAN Win32/IcedID Request Cookie 
+
+Indicators of compromise 
+
+
+			Indicator
+			
+			
+			Description
+			
+			
+			First Observed
+			
+		
+			6c6a68da31204cfe93ee86cd85cf668a20259220ad44341b3915396e263e4f86
+			
+			
+			SHA256 Payload Example 
+
+			HLSV1249_5361051.zip
+			
+			
+			11 October 2023
+			
+		
+			0a61d734db49fdf92f018532b2d5e512e90ae0b1657c277634aa06e7b71833c4
+			
+			
+			SHA256 Payload Example 
+
+			OFFER[2023.10.11_08-07].vbs
+			
+			
+			11 October 2023
+			
+		
+			57897b750473215a2ea6a15070ad5334465019ea4847a2c3c92dae8e5845b2c4
+			
+			
+			SHA256 Payload Example 
+
+			ReadMe[2023.10.11_08-07].txt
+			
+			
+			11 October 2023
+			
+		
+			a12045a6177dd32af8b39dea93fa92962ff1716381d0d137dede1fc75ecd2c0c
+			
+			
+			SHA256 
+
+			IcedID Forked Loader  
+
+			0050-1.dll
+			
+			
+			11 October 2023
+			
+		
+			5d5bc4f497406b59369901b9a79e1e9d1e0a690c0b2e803f4fbfcb391bcfeef1
+			
+			
+			SHA256 
+
+			IcedID 
+
+			Useqacaw.dll
+			
+			
+			11 October 2023
+			
+		
+			hxxps://gestionhqse[.]com/qd
+			
+			
+			404 TDS Redirected to Gate #1
+			
+			
+			11 October 2023
+			
+		
+			hxxps://gilaniultrasound[.]com/wfhfxtktx
+			
+			
+			Gate #1 redirected to Gates #2 (which then leads to download of a Zip)
+			
+			
+			11 October 2023
+			
+		
+			modalefastnow[.]com
+			
+			
+			IcedID Forked Loader C2
+			
+			
+			11 October 2023
+			
+		
+			hxxps://jerryposter[.]com/news/1/255/0
+			
+			
+			IcedID Bot C2 Communication Observed (Example)
+			
+			
+			11 October 2023
+			
+		
+			opuscards[.]ca
+			
+			
+			404 TDS URL Domain
+			
+			
+			11 October 2023
+			
+		
+			cornerbakeryrestaurant.net
+			
+			
+			404 TDS URL Domain
+			
+			
+			11 October 2023
+			
+		
+			karo[.]ca
+			
+			
+			404 TDS URL Domain
+			
+			
+			11 October 2023
+			
+		
+			ekaraj[.]ir
+			
+			
+			404 TDS URL Domain
+			
+			
+			11 October 2023
+			
+		
+			roatancruiseship[.]com
+			
+			
+			404 TDS URL Domain
+			
+			
+			11 October 2023
+			
+		
+			jonanna[.]com
+			
+			
+			404 TDS URL Domain
+			
+			
+			11 October 2023
+			
+		
+			liguys[.]com
+			
+			
+			404 TDS URL Domain
+			
+			
+			11 October 2023
+			
+		
+			naughtycharlotte[.]com
+			
+			
+			404 TDS URL Domain
+			
+			
+			11 October 2023
+			
+		
+			compacta[.]com
+			
+			
+			404 TDS URL Domain
+			
+			
+			11 October 2023
+			
+		
+			brandworks[.]com[.]au
+			
+			
+			404 TDS URL Domain
+			
+			
+			11 October 2023
+]]></content:encoded>
+<pubDate>Mon, 30 Oct 2023 07:40:00 -0700</pubDate>
+<pubDate>Mon, 30 Oct 2023 07:40:00 -0700</pubDate>
+</item>
+<item>
+<title>From Copacabana to Barcelona: The Cross-Continental Threat of Brazilian Banking Malware</title>
+<link>https://www.proofpoint.com/us/blog/threat-insight/copacabana-barcelona-cross-continental-threat-brazilian-banking-malware</link>
+<guid>https://www.proofpoint.com/us/blog/threat-insight/copacabana-barcelona-cross-continental-threat-brazilian-banking-malware</guid>
+<content:encoded><![CDATA[
+<div> TA2725, Grandoreiro malware, Brazil, Mexico, Spain
+Summary:
+The Grandoreiro malware from TA2725 is now targeting victims in Spain, in addition to Brazil and Mexico. This expansion is unusual in frequency and volume compared to previous activity. The Brazilian cyber threat landscape has become more complicated and diverse, with the country being highly targeted for information stealers and other malware. Brazilian banking malware, including Grandoreiro, is still in active development, with the ability to steal data and bank login information. Recent campaigns by TA2725 have targeted both Mexico and Spain simultaneously with the same version of Grandoreiro, showing an expansion of capabilities to include banks in both countries. Threat actors from the Americas have expanded the malware to include other parts of the world, such as Spain. TA2725 is known for using Brazilian banking malware and phishing to target organizations mainly in Brazil and Mexico, as well as targeting consumer credentials and payment information for Netflix and Amazon accounts. As the global supply chain continues to evolve and rely on suppliers around the world, the targeting of organizations outside their normal service region will continue to be an increasing threat worldwide.
+ <div>
+Key Takeaways 
+
+A new version of Grandoreiro malware from TA2725 targets both Mexico and Spain. Previously this malware has only targeted victims in Brazil and Mexico. 
+Overview 
+
+Proofpoint researchers have long tracked clusters of malicious activity using banking malware to target users and organizations in Brazil and surrounding countries. Recently, researchers observed multiple threat clusters targeting Spain from threat actors and malware that have traditionally targeted Portuguese and Spanish speakers in Brazil, Mexico, and other parts of the Americas. While the targeting of victims in the Americas has been common for some time, recent clusters targeting Spain have been unusual in frequency and volume compared to previous activity. 
+
+Brazilian Cyber Threat Landscape 
+
+The Brazilian cyber threat landscape has changed rapidly over the last several years becoming more complicated and diverse. More people than ever are online in the country meaning the potential victim base has increased. According to third-party reporting, Brazil is among the most highly-targeted countries for information stealers and other malware, and its broad adoption of online banking offers potential for threat actors to social engineer people eager to conduct financial activity online.  
+
+Brazilian Banking Malware 
+
+Brazilian banking malware comes in many varieties, but, based on Proofpoint observations, most of them appear to have a  common ancestor written in Delphi with source code reused and modified over many years. This base malware has spawned many varieties of Brazilian malware including Javali, Casabeniero, Mekotio, and Grandoreiro. Some malware strains like Grandoreiro are still in active development (both the loader and the final payload). Grandoreiro has capabilities to both steal data through keyloggers and screen-grabbers as well as steal bank login information from overlays when an infected victim visits pre-determined banking sites targeted by the threat actors. Based on recent Proofpoint telemetry, Grandoreiro is typically delivered with an attack chain beginning with a URL in an email with various lures including shared documents, Nota Fiscal Electronicos (NF-e, a tax form required to be used by organizations in Brazil), and utility bills. Once a victim clicks the URL, they are delivered a zip file containing the loader, usually an MSI, HTA or exe file. If the user runs the loader, the malicious file will use DLL injection to add malicious behavior to an otherwise legitimate but vulnerable program included in the zip file with the loader. The loader will then download and run the final Grandoreiro payload and check in with a command and control (C2) server. 
+
+Previously, bank customers targeted by Grandoreiro overlays have been in Brazil and Mexico, but recent Grandoreiro campaigns show that this capability has been expanded to banks in Spain as well. Two campaigns attributed to TA2725 spanning from 24 through 29 August 2023 shared common infrastructure and payload while targeting both Mexico and Spain simultaneously.  This development means that the Grandoreiro bank credential stealing overlays now include banks in both Spain and Mexico in the same version so that the threat actors can target victims in multiple geographic regions without modification of the malware. 
+
+
+
+Figure 1. Common C2 and payload download for both campaigns. 
+
+Threat actors from the Americas have previously targeted organizations in Spain but have typically used  more generic malware or phishing campaigns that were unique to Spain. In this case, the threat actors have expanded this version of Grandoreiro that had previously only targeted the Americas to include other parts of the world. 
+
+
+
+Figure 2. Example of TA2725 targeting of victims in Spain in August and September by spoofing ÉSECÈ Group, a Spanish manufacturing company. 
+
+
+
+Figure 3. Example of an unattributed Grandoreiro cluster targeting Spain with a mobile phone bill lure spoofing Claro. 
+
+TA2725 
+
+TA2725 is a threat actor Proofpoint has tracked since March 2022 that is known for using Brazilian banking malware and phishing to target organizations mainly in Brazil and Mexico. The actor has been observed targeting credentials for banks in those countries as well as targeting consumer credentials and payment information for Netflix and Amazon accounts. TA2725 typically hosts their URL redirector on GoDaddy virtual hosting and redirects users to a zip file hosted on legitimate cloud hosting providers such as Amazon AWS, Google Cloud, or Microsoft Azure.     
+
+Conclusion 
+
+Given the rapid malware development and tenacity of threat actors in Latin America and South America, we expect to see an increase in targets of opportunity outside that region who share a common language. As the global supply chain continues to evolve and rely on suppliers around the world, the targeting of organizations outside of a company’s normal service region will continue to be an increasing threat to all organizations worldwide.
+]]></content:encoded>
+<pubDate>Mon, 23 Oct 2023 05:00:00 -0700</pubDate>
+<pubDate>Mon, 23 Oct 2023 05:00:00 -0700</pubDate>
+</item>
+<item>
+<title>Are You Sure Your Browser is Up to Date? The Current Landscape of Fake Browser Updates</title>
+<link>https://www.proofpoint.com/us/blog/threat-insight/are-you-sure-your-browser-date-current-landscape-fake-browser-updates</link>
+<guid>https://www.proofpoint.com/us/blog/threat-insight/are-you-sure-your-browser-date-current-landscape-fake-browser-updates</guid>
+<content:encoded><![CDATA[
+<div> Fake browser update, malware, TA569, SocGholish, threat clusters
+Summary:
+- Proofpoint is tracking multiple threat clusters that use fake browser updates to distribute malware, taking advantage of end user trust and compromised websites.
+- These fake browser updates abuse user trust and target various browsers, fooling users into clicking and downloading harmful malware.
+- Threat actors don't send emails to share the compromised websites, so the threat is only in the browser and can be initiated through various means.
+- The campaigns use similar lures but different payloads, requiring a specific response to each to mitigate the threat effectively.
+- Four distinct clusters, including SocGholish, RogueRaticate, ZPHP/SmartApeSG, and ClearFake, are identified, each using unique methods to deliver fake browser update lures and payloads.
+- Each of these campaigns has specific characteristics and stages, making them challenging to detect and respond to effectively.
+Summary: <div>
+Key Takeaways 
+
+
+	Proofpoint is tracking multiple different threat clusters that use similar themes related to fake browser updates. 
+	
+
+	Fake browser updates abuse end user trust with compromised websites and a lure customized to the user's browser to legitimize the update and fool users into clicking. 
+	
+	
+	Threat actors do not send emails to share the compromised websites. The threat is only in the browser and can be initiated by a click from a legitimate and expected email, social media site, search engine query, or even just navigating to the compromised site. 
+	
+	
+	The different campaigns use similar lures, but different payloads. It is important to identify which campaign and malware cluster the threat belongs to help guide defender response. 
+	
+Overview 
+
+Proofpoint is currently tracking at least four distinct threat clusters that use fake browser updates to distribute malware. Fake browser updates refer to compromised websites that display what appears to be a notification from the browser developer such as Chrome, Firefox, or Edge, informing them that their browser software needs to be updated. When a user clicks on the link, they do not download a legitimate browser update but rather harmful malware.   
+
+Based on our research, TA569 has used fake browser updates for over five years to deliver SocGholish malware, but recently other threat actors have been copying the lure theme. Each threat actor uses their own methods to deliver the lure and payload, but the theme takes advantage of the same social engineering tactics. The use of fake browser updates is unique because it abuses the trust end users place in both their browser and the known sites that they visit.  
+
+Threat actors that control the fake browser updates use JavaScript or HTML injected code that directs traffic to a domain they control, which can potentially overwrite the webpage with a browser update lure specific to the web browser that the potential victim uses. A malicious payload will then automatically download, or the user will receive a prompt to download a “browser update,” which will deliver the payload. 
+
+Fake browser update lure and effectiveness 
+
+The fake browser update lures are effective because threat actors are using an end-user's security training against them. In security awareness training, users are told to only accept updates or click on links from known and trusted sites, or individuals, and to verify sites are legitimate. The fake browser updates abuse this training because they compromise  trusted sites and use JavaScript requests to quietly make checks in the background and overwrite the existing, website with a browser update lure. To an end user, it still appears to be the same website they were intending to visit and is now asking them to update their browser. 
+
+Proofpoint has not identified threat actors directly sending emails containing malicious links, but, due to the nature of the threat, compromised URLs are observed in email traffic in a variety of ways. They are seen in normal email traffic by regular end users who are unaware of the compromised websites, in monitoring emails such as Google alerts, or in mass automated email campaigns like those distributing newsletters. This creates a situation where these emails are considered to be malicious during the time the site is compromised. Organizations should not treat the fake browser update threats as only an email problem, as end users could visit the site from another source, such as a search engine, social media site, or simply navigate to the site directly and receive the lure and potentially download the malicious payload. 
+
+Each campaign uniquely filters traffic to hide from researchers and delay discovery, but all the methods are effective at filtering. While this may reduce the potential spread of malicious payloads, it enables actors to maintain their access to the compromised sites for longer periods of time. This can complicate the response, because with the multiple campaigns and changing payloads, responders must take time to figure out what they need to look for and identify the relevant indicators of compromise (IOCs) at the time of the download. 
+
+Campaigns 
+
+The current landscape includes four different threat clusters using unique campaigns to deliver fake browser update lures. Due to the similarity in the lures and attack chain, some public reporting has incorrectly attributed the activity to the same threat cluster. Based on Proofpoint's distinct visibility, Proofpoint researchers were able to break these into more granular clusters. 
+
+Proofpoint’s research focuses on the fake browser update landscape overall, to provide details on how defenders can identify each unique campaign, as well as additional links to additional Proofpoint or third-party reporting containing in-depth research and analysis. For example, Jérôme Segura of Malwarebytes has put together a good resource showing some of the images each campaign uses as lures on GitHub.  
+
+Each campaign has some general shared characteristics that can be described as three distinct stages of the campaign. “Stage 1” is a malicious injection on a legitimate, but compromised, website. “Stage 2” refers to the traffic to and from the actor-controlled domain that does most of the filtering and hosts the lure and malicious payload. “Stage 3” is the execution of the payload on a host after download.  
+
+SocGholish
+
+SocGholish is the primary threat that people think of when talking about a fake browser update lure and it has been well documented over the years. Proofpoint typically attributes SocGholish campaigns to a threat actor known as TA569. Proofpoint has observed TA569 act as a distributor for other threat actors. 
+
+Currently, TA569 is using three different methods to direct traffic from the stage 1 compromised websites to their actor-controlled stage 2 shadowed domains. 
+
+The first method is using an injection that utilizes the Keitaro traffic distribution system (TDS) via a variety of actor-controlled domains. Those domains will filter some requests out before routing to the stage 2 domains. Most of the injects that point to Keitaro TDS URLs will contain multiple different redirect domains in the same file, as seen in figure 2 below.  
+
+The second method TA569 uses is Parrot TDS (also known as NDSW/NDSX) to obfuscate their injected code and apply similar filtering before routing requests to the stage 2 domains. Compromised websites may contain as many as 10 malicious JavaScript files that all contain Parrot TDS injections leading to SocGholish payloads.  
+
+The third method TA569 uses is a simple JavaScript asynchronous script request in compromised websites’ HTML that reaches out to a stage 2 domain.  
+
+The variety of injections make it difficult for defenders to both identify the location of the malicious injection and reproduce the traffic due to the various stages of filtering. 
+
+Each of these methods reaches out to a stage 2 domain which does additional filtering and will deliver the fake browser update lure and payload to traffic that passes the filtering. The payload can be either a plain JavaScript (.js) file, usually named “Update.js”, or a zipped JavaScript file. If the payload is executed by the user, it will first fingerprint the host via wscript. Depending on the results of the fingerprinting, the JavaScript will either quit, load a remote access trojan (RAT), or wait for further commands from the threat actor, which has been reported leading to Cobalt Strike or BLISTER Loader. Proofpoint has recently observed SocGholish infections leading to AsyncRAT and NetSupport RAT as the RAT payloads. 
+
+ Figure 1. SocGholish fake update lure spoofing a Chrome update.  
+
+Figure 2. Keitaro TDS inject example.  
+
+Figure 3. Parrot (NDSW) inject example. 
+
+Figure 4. Asynchronous inject example. 
+
+RogueRaticate/FakeSG  
+
+The second fake browser update our researchers identified is known as RogueRaticate or FakeSG. Proofpoint first identified this activity in May 2023, and third-party researchers dubbed it a copy of the existing and high-volume SocGholish campaigns. The activity may have started in the wild as early as November 2022. Proofpoint does not attribute the RogueRaticate activity to a tracked threat actor at this time, and it has consistently been distinctly differentiated from SocGholish campaigns. 
+
+RogueRaticate injects heavily obfuscated JavaScript code into existing JavaScript files on stage 1 websites. The injected JavaScript reaches out to a stage 2 domain. The stage 2 domain hosts a Keitaro TDS that filters out unwanted requests and responds with a blank “body” value in a JSON response. When it identifies a target to receive the lure, it sends the lure double Base64 encoded in the “body” value. The lure contains a button which, if pressed, uses an HTML href attribute to download the payload from a separate compromised site, typically hosted on WordPress.  
+
+The fake update payload for the RogueRaticate campaigns has always involved an HTML Application (.hta) file. The HTA is either zipped or downloaded via a shortcut (.url) file that points to the .lnk. The .hta file typically loads a malicious NetSupport RAT payload onto the host via the same stage 2 domain that hosted the malicious payload. 
+
+ Figure 5. Example RogueRaticate fake update lure spoofing a Chrome update.  
+
+ Figure 6. Example RogueRaticate inject.  
+
+ZPHP/SmartApeSG  
+
+Proofpoint first identified another new cluster of fake update campaigns leading to NetSupport RAT in June 2023. The activity was first publicly reported by Trellix in August 2023. This activity has been referred to as ZPHP by Proofpoint or SmartApeSG in public documentation. The inject is a simple script object that is added into a compromised website’s HTML code. It makes an asynchronous request to either “/cdn/wds.min.php” or “/cdn-js/wds.min.php” on a stage 2 domain. The response is heavily obfuscated JavaScript code that will attempt to create an iframe and make a second request to “/zwewmrqqgqnaww.php?reqtime=” which appears to filter out undesired requests and return the browser update lure to non-filtered requests. The payload is downloaded via a base64 encoded zip file.  
+
+The zipped browser update payload usually contains a JavaScript (.js) file that will load a malicious NetSupport RAT payload onto the host. Proofpoint has also seen the .zip contain an executable (.exe) that loaded Lumma Stealer. 
+
+
+
+Figure 7. Example ZPHP lure spoofing a Chrome update. 
+
+
+
+Figure 8. Example ZPHP inject. 
+
+Proofpoint does not currently attribute the ZPHP activity to an actor with a TA number designation. 
+
+ClearFake  
+
+In August 2023, third-party researchers published details on a fake browser update threat activity known as ClearFake. Proofpoint subsequently identified consistent campaigns related to this cluster and observed a series of changes in the short amount of time while monitoring it. The inject is a base64 encoded script added to the HTML of the compromised webpage. Proofpoint observed the injection pointing to a variety of services including Cloudflare Workers, a file hosted on an actor’s GitHub, and most recently the blockchain network known as Binance Smart Chain. The initial request directs traffic to a stage 2 domain that hosts the Keitaro TDS filtering service to filter requests. The actor uses newly registered stage 2 domains, which, if a visitor passes the filtering, create an iFrame of the fake update lure hosted on the stage 2 domain. Clicking on the update button will result in a download of the payload which has been observed hosted on Dropbox and OneDrive. 
+
+The observed payload was either an executable (sometimes zipped), .msi, and .msix that leads to the installation of a variety of stealers including Lumma, Redline, and Raccoon v2. 
+
+
+
+Figure 9. Example ClearFake lure spoofing a Chrome update. 
+
+
+
+Figure 10. Example ClearFake injection. 
+
+Notably, Proofpoint has observed ClearFake display the fake update lures in certain languages to match the browser's set language, including French, German, Spanish, and Portuguese. Proofpoint does not attribute the ClearFake activity to an actor with a TA number designation. 
+
+Conclusion 
+
+Proofpoint has observed an increase in threat activity using fake browser updates to deliver a variety of malware including payloads. SocGholish and TA569 have demonstrated that compromising vulnerable websites to display fake browser updates works as a viable method for malware delivery, and new actors have learned from TA569 and started to adopt the lure in their own ways. These copycats may be using information stealers and RATs currently, but could easily pivot to being an initial access broker for ransomware.  
+
+The activity detailed in this report can be hard for security teams to detect and prevent and may present difficulties with communicating the threat to end users due to the social engineering techniques and website compromises used by the threat actor. The best mitigation is defense in depth. Organizations should have network detections in place – including using the Emerging Threats ruleset – and use endpoint protection. Additionally, organizations should train users to identify the activity and report suspicious activity to their security teams. This is very specific training but can easily be integrated into an existing user training program. A tool such as Proofpoint’s Browser Isolation can also help prevent successful exploitation when compromised URLs are received via email and clicked on. 
+
+Specific indicators of compromise (IOCs) associated with the identified activities change regularly, as the threat actors are routinely moving their infrastructure and changing details in their payloads. The infosec.exchange account @monitorsg is a useful public resource for following along with recent details on payloads and infrastructure changes. The Emerging Threats Ruleset has domain rules available for most of the current threats and is regularly updating and publishing new rules to block all fake browser update campaigns.  
+
+Hunting IOCs and Payload Examples (As of 2023-09-28): 
+
+SocGholish: 
+
+C2 URI: 
+
+/editContent 
+
+ 
+
+8bdc4c1cd197808056e50b8b958acd380bf8a69b63aedef3f9854173c6714b32 
+
+3fb9740940d44eef823b7ff17f0274a12345a6f238cf46a1133a9e39c7b97c62 
+
+ 
+
+RogueRaticate: 
+
+Keitaro TDS Hosted on: 
+
+178.159.37.73 
+
+178.159.37.25 
+
+ 
+
+1d9900c8dbaa47d2587d08b334d483b06a39acb27f83223efc083759f1a7a4f6 
+
+08d9df800127f9fb7ff1a246346e1cf5cfef9a2521d40d6b2ab4e3614a19b772 
+
+ 
+
+ZPHP: 
+
+Injects lead to paths: 
+
+/cdn/wds.min.php 
+
+/cdn-js/wds.min.php 
+
+/cdn/zwmrqqgqnaww.php 
+
+/cdn/zwewmrqqgqnaww.php 
+
+ 
+
+e9580370160d39ef010dfdbfa614820cfe464507ce344a11bcbe760902297c8f 
+
+0b28e9df9daf8a3d0aa3dc8a066a34134916dfacd9ba5d25d78e097525f66492 
+
+ 
+
+ClearFake: 
+
+Chrome lure on: 
+
+/lander/chrome/_index.php 
+
+ 
+
+37bba90d20e429ce3fd56847e4e7aaf83c62fdd70a7dbdcd35b6f2569d47d533 
+
+ab282db6f1fc4b58272cef47522be19d453126b69f0e421da24487f54d611b2f 
+
+ 
+
+Emerging Threats Signatures: (All Open Sigs available for free) 
+
+“ET MALWARE SocGholish Domain in (DNS Lookup/TLS SNI) ()” 
+
+“ET MALWARE SocGholish CnC Domain in (DNS Lookup/TLS SNI) ()” 
+
+“ET EXPLOIT_KIT RogueRaticate Domain in (DNS Lookup/TLS SNI) ()” 
+
+“ET EXPLOIT_KIT Keitaro Set-Cookie Inbound to RogueRaticate (4cdcb)" 
+
+“ET EXPLOIT_KIT Keitaro Set-Cookie Inbound to RogueRaticate (3a7ee)" 
+
+“ET EXPLOIT_KIT Keitaro Set-Cookie Inbound to ClearFake (71eb8)” 
+
+“ET EXPLOIT_KIT ZPHP Domain in (DNS Lookup/TLS SNI) ()”
+]]></content:encoded>
+<pubDate>Tue, 17 Oct 2023 05:00:21 -0700</pubDate>
+<pubDate>Tue, 17 Oct 2023 05:00:21 -0700</pubDate>
+</item>
+<item>
+<title>ZenRAT: Malware Brings More Chaos Than Calm</title>
+<link>https://www.proofpoint.com/us/blog/threat-insight/zenrat-malware-brings-more-chaos-calm</link>
+<guid>https://www.proofpoint.com/us/blog/threat-insight/zenrat-malware-brings-more-chaos-calm</guid>
+<content:encoded><![CDATA[
+
+Key Takeaways 
+
+Proofpoint identified a new malware called ZenRAT being distributed via fake installation packages of the password manager Bitwarden. 
+	The malware is specifically targeting Windows users and will redirect people using other hosts to a benign webpage. 
+	At this time, it is unknown how the malware is being distributed. 
+	The malware is a modular remote access trojan (RAT) with information stealing capabilities.  
+Overview 
+
+Proofpoint Emerging Threats often receives tips from the community leading to the investigation and detection of novel malware. On 10 August 2023, Jérôme Segura, Senior Director of Threat Intelligence at Malwarebytes shared a malware sample that was being distributed as a part of a Windows software installation package. The sample was initially discovered on a website pretending to be associated with Bitwarden, bitwariden[.]com, a very convincing lookalike to the real bitwarden.com. Packaged with a standard Bitwarden installation package is a malicious .NET executable that we have dubbed “ZenRAT”. 
+
+At this time, it is unknown how the malware is being distributed, however historic activities that have masqueraded as fake software installers have been delivered via SEO Poisoning, adware bundles, or via email.  
+
+ Figure 1: Fake Bitwarden website, bitwariden[.]com. bears a remarkable resemblance in theme with bitwarden.com. It is uncertain as to how traffic is being directed to this domain. 
+
+Specifically Targeting Windows Users 
+
+The malicious website only displays the fake Bitwarden download if a user accesses it via a Windows host. If a non-Windows user attempts to navigate to this domain, the page changes to something entirely different. 
+
+
+
+Figure 2: If a non-Windows user attempts to visit the malicious website, they are instead redirected to a cloned opensource.com article. This screen capture was taken using Mozilla Firefox on Ubuntu 22.04. 
+
+The website instead masquerades as the legitimate website “opensource.com”, going so far as to clone an article from Opensource.com by Scott Nesbitt, about the Bitwarden password manager. Additionally, if Windows users click download links marked for Linux or MacOS on the Downloads page, they are instead redirected to the legitimate Bitwarden site, vault.bitwarden.com. Clicking the Download button or the Desktop installer for Windows download button results in an attempt to download Bitwarden-Installer-version-2023-7-1.exe. This payload is hosted on the domain crazygameis[.]com, which as of this writing no longer appears to be hosting the payload: 
+
+
+
+Figure 3: When Windows users click either the Download button or the desktop installer for Windows option, a request is made to crazygameis[.]com to retrieve the malicious Bitwarden installer. 
+
+The domain registrar for both domains appears to be NiceNIC International Group, while the sites themselves appear to be hosted on Cloudflare. 
+
+Installer Details 
+
+The malicious installer, Bitwarden-Installer-version-2023-7-1.exe appears to have been first reported on VirusTotal on 28 July 2023, under a different name CertificateUpdate-version1-102-90.  
+
+
+
+Figure 4: So far, the installer sample has been seen twice in relatively close proximity under two entirely different names. 
+
+Looking at the details of the installer, we can see that the digital signature is not valid, but more interestingly, the installer is claiming to be Piriform’s Speccy – a software application for gathering system specifications.  
+
+
+
+Figure 5: The file metadata for the malicious bitwarden installer claims that it is Speccy, an application that is used to gather information (specs) about the system on which the application is run. 
+
+Not only that, the installer claims that it is signed by Tim Kosse, an open-source software developer most well-known for the Filezilla FTP/SFTP software. 
+
+
+
+Figure 6: In addition to the questionable file properties, the installer has an invalid digital signature, and claims to have been signed by Tim Kosse, an open-source developer most well-known for the FileZilla FTP/SFTP software. 
+
+The installer file copies itself to C:\Users\[username]\Appdata\Local\Temp, and creates a hidden file, named .cmd in the same directory that launches a self-deletion loop for both itself, and the installer file.  
+
+
+
+Figure 7: A file named .cmd file gets dropped with the installer into AppData\Local\Temp, under the current user. This file runs a self-deletion loop that automatically removes itself and the installer as soon as the installer executable finishes running. 
+
+The installer places a copy of an executable, ApplicationRuntimeMonitor.exe into C:\Users\[username]\AppData\Roaming\Runtime Monitor\, and runs it.  
+
+ZenRAT Details 
+
+ZenRAT (ApplicationRuntimeMonitor.exe), unlike the installer file, features some interesting metadata claiming to be a completely different application. The file properties claim that it is created by Monitoring Legacy World Ltd: 
+
+
+
+Figure 8: File metadata for the dropped ZenRAT executable, claiming to yet another application. 
+
+Upon execution, it uses WMI queries and other system tools to gather information about the host: 
+
+-CPU Name 
+-GPU Name 
+-OS Version 
+-Installed RAM 
+-IP address and Gateway 
+-Installed Antivirus 
+-Installed Applications 
+
+ZenRAT was observed sending this information back to its command and control (C2) server along with stolen browser data/credentials in a zip file called Data.zip with the filenames InstalledApps.txt, and SysInfo.txt. 
+
+
+
+Figure 9: Upon execution, ZenRAT will gather system fingerprinting data and package it into a ZIP file for exfiltration to the C2 along with output from other modules, such as its browser information stealer. SysInfo.txt contains fingerprinting data about the infected host, while InstalledApps.txt contains a list of installed applications. 
+
+Command and Control 
+
+Upon initial execution, ZenRAT establishes communication with its C2 server. In this instance, the only active C2 server Proofpoint has observed is 185[.]186.72.14. The C2 protocol is unique. 
+
+Client-Side Communication 
+
+The Client initiates communication to the C2. Regardless of the command, and extra data transmitted, the first packet is always 73 bytes. Here is the packet structure for the client check-in: 
+
+
+
+Figure 10: General structure of ZenRAT client communications. While some command IDs may result in more transmitted data from the client, the first packet always totals 73 bytes. Additional data is not appended to this packet, but is sent as a separate packet in the same TCP stream. 
+
+Command ID – The first byte of the client packet is reserved for the command sent to the C2 server. Below is a table of observed client Command IDs: 
+
+
+			Value
+			
+			
+			Command
+			
+		
+			0x01
+			
+			
+			Tasking Request
+			
+		
+			0x02
+			
+			
+			Request Module
+			
+		
+			0x05
+			
+			
+			Update
+			
+		
+			0x06
+			
+			
+			Sending Module Results
+			
+		
+			0x07
+			
+			
+			Change Module Status
+			
+		
+			0x08
+			
+			
+			Send Activity Logs
+			
+		
+			0x09
+			
+			
+			Ping
+			
+		
+			0x0A
+			
+			
+			Get Module Status
+			
+		Data Size – 8 bytes, beginning with the second byte in the client packet. The number of bytes to expect from the client. Including the Command ID and the Data Size value itself. For example, 0x49 in figure 10 denotes the client is sending 73 bytes in total. 
+
+Hardware ID – This value is a Sha-256 hash concatenation of the username of the current user, machine name, Windows version string and the milliseconds value from the timestamp of the Windows directory. 
+
+Bot ID – Immediately after the HWID is the 16-byte Bot ID, generated from a hard-coded GUID 
+
+Version – The next eight bytes are reserved for the implant version 
+
+Build – The final seven bytes are reserved for the build version of the implant 
+
+Server-Side Communication 
+
+The server-side communication is much simpler than the client. Like the client’s communication, the first packet the server sends back to the client is a fixed length – in this case, nine bytes in size, followed by additional packets in the stream necessary for certain responses back to the client. The packet structure for the server response is identical to the structure for the first nine bytes of the client-side communication – A one byte Response code, followed by eight bytes reserved from the amount of data being sent back to the infected host in total. 
+
+
+
+Figure 11: Packet Structure for C2 responses. The first packet is always a fixed size (nine bytes), and the structure for that packet is identical to the first nine bytes of the client packet. 
+
+Response ID – A one-byte field that denotes the response to the command the client sent to the server. Below is a table of observed Server Respond IDs: 
+
+
+			Value
+			
+			
+			Response
+			
+		
+			0x00
+			
+			
+			Successful Acknowledgement
+			
+		
+			0x04
+			
+			
+			No Tasking
+			
+		
+			0x0A
+			
+			
+			Client is Fully Updated
+			
+		Data Size – Eight-byte value defines the amount of data, including the Response ID and Data Size fields, the client should expect from the server. 
+
+Interesting Commands Observed 
+
+While ZenRAT has several observed Command IDs, here are some of the more interesting ones observed: 
+
+Send Logs 
+
+While great care seems to have been taken establishing a custom C2 protocol, ZenRAT is configured to send its logs to the C2 server in the clear. As mentioned above, the command ID for the client to send its logs is 0x08. The client will send its initial 73-byte packet, followed by a complete ASCII log of various tasks it has performed up until that point. 
+
+
+
+Figure 12: A screen capture of the send logs command. Useful for determining the purpose of the different Command IDs, sent to the C2 server in plaintext format. 
+
+The logs in Figure 12 indicate that prior to establishing communications with the C2 server, ZenRAT has a handful of system checks it performs: 
+
+IsBlockedRegion: A geofencing check to ensure that the malware is not operating in any of these regions: 
+	ru-BY 
+		ru-KG 
+		ru-KZ 
+		ru-MD 
+		ru-RU 
+		ru-UA 
+	
+	IsMutex: Ensures that ZenRAT can create a mutex for itself. This is to ensure there is only one copy of the malware operating on the system at a time. 
+	IsSmallDisk: A system check that ensures that the system disk the malware is running on is not less than 95GB in size and can be seen as an anti-sandboxing feature. 
+	IsDetectVM: An anti-virtualization check that checks the running processes against a blacklisted set of process names, associated with virtualization products: 
+	Vmtoolsd 
+		vboxservice 
+		Vmwareuser 
+		Vmwaretray 
+		VMware 
+		VMware Tools 
+		vmtoolsd 
+	
+The text [ CONFIRMED ] means that a check was successful, while an unsuccessful check would result in [ ERROR ] showing up in the log instead. After passing the checks, the client sends a ping command ID to verify connectivity, then checks for updates to the client. Afterwards, in this instance, we see the client request tasking, in which the C2 server responds with a Task and Module number that it has for the client. Immediately after the client requests this module, verifies it against a SHA256 hash, and injects it into PID 2680 (in our analysis, this was the regasm.exe process), with an argument: 
+
+uZxIDqImAABkdGqXUbYcQqojy5S9DIKtioa0zReZTJK+MVGP4yuvtUIuq8JUGQM7z+3XyneLWjgDAAAAAAAAAAIAAAAAAAAABQAAAHIEAAAAAAAA 
+
+When decoded, the hexdump of this value becomes: 
+
+
+
+Figure 13: Structure of the base64 data argument observed in the client send logs command ID. Most of the values in this structure are identical to the values in the 73-byte client communication packet. 
+
+Most of the values in this data struct – Bot ID, Hardware ID, Version and Build are identical to the client communication packet structure, so let’s focus on what is different: 
+
+IP Address – IP address of the C2 Server. As established earlier, this is 185[.]186.72.14 
+	Port Number – TCP port number to use when communicating with the C2 Server. In this case, the implant is using port 9890/TCP 
+	Module ID – Module number associated with the module the client is attempting to run (0x05) 
+	Task ID – Task ID assigned from the server to activate this module. Hex value (0x0472 == 1138) 
+Send Module Results 
+
+Client command ID 0x06 is used to transmit results from module. In a separate sample, ZenRAT was observed sending the results from Module 0x09, with a Task ID of 0x0829 back to the C2 server: 
+
+
+
+Figure 14: Structure of Data sent with the Module Results (0x06) Command ID 
+
+The data transferred in Figure 14 Is encrypted using AES-256-CBC, in chunks of 50000 bytes. To decrypt this data, it must be processed in chunks of 50016 (50000 bytes + 16 bytes of CBC padding) The 32-byte key is derived from the SHA256 Hash of the Task ID. For example, 0x2908000000000000 produces the SHA256 hash 799b9288579cac5dc19f6b7cb84636f07ea52ecfa151bc71f00e8b8dbf980869, While the 16-byte IV is the first 16 bytes of the Hardware ID (itself a SHA256 hash consisting of an amalgamation of system-specific data. This Hardware ID is identical to the Hardware ID in the Client-Side Communication section above). Trim off the 0x290800000000000000 (nine bytes in total – The eight-byte TaskID, plus 0x00) from the beginning of the next packet, use the Key and IV values above, and the result is the Data.zip file, containing the data the module has gathered from the system. 
+
+
+
+Figure 15: By using the SHA256 value of the Task ID, as the Key, and the first 16 bytes of the Hardware ID value as the IV, the data sent along with command ID 0x06 can be decrypted. 
+
+The existence of the Task and Module ID fields implies that ZenRAT is designed to be a modular, extendable implant. At this time, we have not observed other modules being used in the wild. 
+
+Conclusion 
+
+Malware is often delivered via files that masquerade as legitimate application installers. End users should be mindful of only downloading software directly from the trusted source, and always check the domains hosting software downloads against domains belonging to the official website. People should also be wary of ads in search engine results, since that seems to be a major driver of infections of this nature, especially within the last year. 
+
+Indicators of Compromise 
+
+
+			IP Address
+			
+			
+			Purpose
+			
+		
+			185[.]186.72.14:9890
+			
+			
+			Observed ZenRAT C2 server
+			
+		
+			185[.]156.72.8:9890
+			
+			
+			Observed nonresponsive ZenRAT C2 server
+			
+		 
+
+
+			Domain
+			
+			
+			Purpose
+			
+		
+			bitwariden[.]com
+			
+			
+			Bitwarden look-alike domain
+			
+		
+			crazygameis[.]com
+			
+			
+			Payload delivery domain
+			
+		
+			obsploject[.]com
+			
+			
+			OBS Project look-alike domain (recently registered, no longer responsive)
+			
+		
+			geogebraa[.]com
+			
+			
+			GeoGebra look-alike domain (recently registered, no longer responsive)
+			
+		 
+
+
+			SHA256
+			
+			
+			Observed Filename
+			
+		
+			e0c067fc8e10a662c42926f6cdadfa5c6b8c90d5dff3f0e9f381210180d47d37
+			
+			
+			Bitwarden-Installer-version-2023-7-1.exe
+			
+		
+			d7d59f7db946c7e77fed4b927b48ab015e5f3ea8e858d330930e9f7ac1276536
+			
+			
+			ApplicationRuntimeMonitor.exe
+			
+		
+			8378c6faf198f4182c55f85c494052a5288a6d7823de89914986b2352076bb12
+			
+			
+			Bitwarden-Installer-version-2023-7-1.exe
+			
+		
+			f7573ad27ff407e84d3ebf173cbeaaa6aba62eb74b4b2b934bc0433df3d9e066
+			
+			
+			SearchModule.exe
+			
+		
+			e318b2c1693bc771dfe9a66ee2cebcc2b426b01547bb0164d09d025467cb9ee3
+			
+			
+			CertificateUpdate.version2.10.12.exe
+			
+		
+			60098db9f251bca8d40bf6b19e3defa1b81ff3bdc13876766988429a2e922a06
+			
+			
+			SystemSecurity.exe
+			
+		
+			ba36d9d6e537a1c1ecdf1ace9f170a3a13c19e77f582a5cae5c928a341c1be8d
+			
+			
+			2421c4cd791b1eexeexe.exe
+			
+		
+			986aa8e20962b28971b3a5335ef46cf96c102fa828ae7486c2ac2137a0690b76
+			
+			
+			npp.8.4.8.Installer.exe
+			
+		Emerging Threats Rule Coverage 
+
+2037786 – ET INFO Pastebin-style Service (textbin.net in TLS SNI) 
+2047754 – ET MALWARE ZenRAT Ping Command 
+2047755 – ET MALWARE ZenRAT CnC OK Response 
+2047754 – ET MALWARE ZenRAT Ping Command 
+2047755 – ET MALWARE ZenRAT CnC OK Response 
+2047756 – ET MALWARE ZenRAT Get Status Command 
+2047757 – ET MALWARE ZenRAT Status Response 
+2047758 – ET MALWARE ZenRAT Change Status Command 
+2047759 – ET MALWARE ZenRAT Request Module Command 
+2047760 – ET MALWARE ZenRAT Request Module CnC Response 
+2047761 – ET MALWARE ZenRAT Update Command 
+2047762 – ET MALWARE ZenRAT Update CnC Response (Already Actual) 
+2047763 – ET MALWARE ZenRAT Tasking Command 
+2047764 – ET MALWARE ZenRAT Tasking CnC Response M1 
+2047765 – ET MALWARE ZenRAT Tasking CnC Response M2 
+
+Data Decryption script 
+
+The following is a decryption script for the data uploaded by the browser stealing module. This script was provided by our Reverse Engineering Team: 
+
+#! /usr/bin/env python3 
+ 
+# ZenRAT encrypts stolen browser data before uploading - but does it in 50000 byte chunks 
+ 
+import sys 
+import hashlib 
+# from Crypto.Cipher import AES 
+from Cryptodome.Cipher import AES 
+ 
+ 
+def unpad(s): 
+    if s[-s[-1]:] == s[-1:0] * s[-1]: 
+        return s[:-s[-1]] 
+    else: 
+        return s 
+ 
+ 
+data = sys.stdin.buffer.read() 
+ 
+h = hashlib.sha256() 
+h.update(data[9:41])   # HWID - itself the SHA256 of username + machine name + windows ver + msecs 
+iv = h.digest()[:16] 
+ 
+h = hashlib.sha256() 
+h.update(data[0x49:0x51])   # Task ID 
+key = h.digest() 
+ 
+out = b"" 
+for p in range(0x52, len(data), 50016):   # CBC adds 16 bytes (blocksize) to the length 
+    aes = AES.new(key, AES.MODE_CBC, iv) 
+    out += unpad(aes.decrypt(data[p:p + 50016])) 
+ 
+sys.stdout.buffer.write(out) 
+
+Acknowledgements  
+
+We would like to thank Jérôme Segura, Senior Director of Threat Intelligence at Malwarebytes for his discovery of and collaboration on this threat.
+]]></content:encoded>
+<pubDate>Tue, 26 Sep 2023 05:00:51 -0700</pubDate>
+<pubDate>Tue, 26 Sep 2023 05:00:51 -0700</pubDate>
+</item>
+<item>
+<title>Chinese Malware Appears in Earnest Across Cybercrime Threat Landscape</title>
+<link>https://www.proofpoint.com/us/blog/threat-insight/chinese-malware-appears-earnest-across-cybercrime-threat-landscape</link>
+<guid>https://www.proofpoint.com/us/blog/threat-insight/chinese-malware-appears-earnest-across-cybercrime-threat-landscape</guid>
+<content:encoded><![CDATA[
+
+Key Takeaways
+
+Proofpoint has observed an increase in activity from specific malware families targeting Chinese-language speakers.
+	Campaigns include Chinese-language lures and malware typically associated with Chinese cybercrime activity.
+	Newly observed ValleyRAT is emerging as a new malware among Chinese-themed cybercrime activity, while Sainbox RAT and related variants are recently active as well.
+	The increase in Chinese language malware activity indicates an expansion of the Chinese malware ecosystem, either through increased availability or ease of access to payloads and target lists, as well as potentially increased activity by Chinese speaking cybercrime operators.  
+Overview
+
+Since early 2023, Proofpoint observed an increase in the email distribution of malware associated with suspected Chinese cybercrime activity. This includes the attempted delivery of the Sainbox Remote Access Trojan (RAT) – a variant of the commodity trojan Gh0stRAT – and the newly identified ValleyRAT malware. After years of this malware not appearing in Proofpoint threat data, its appearance in multiple campaigns over the last six months is notable. 
+
+The phrase “Chinese-themed” is used to describe any of the observed content related to this malicious activity, including lures, malware, targeting, and any metadata that contains Chinese language usage. Campaigns are generally low-volume and are typically sent to global organizations with operations in China. The email subjects and content are usually written in Chinese, and are typically related to business themes like invoices, payments, and new products. The targeted users have Chinese-language names spelled with Chinese-language characters, or specific company email addresses that appear to align with businesses' operations in China. Although most campaigns have targeted Chinese speaking users, Proofpoint observed one campaign targeting Japanese organizations, suggesting a potential expansion of activity. 
+
+These recently identified activity clusters have demonstrated flexible delivery methods, leveraging both simple and moderately complex techniques. Commonly, the emails contain URLs linking to compressed executables that are responsible for installing the malware. However, Proofpoint has also observed Sainbox RAT and ValleyRAT delivered via Excel and PDF attachments containing URLs linking to compressed executables. 
+
+Proofpoint researchers assess those multiple campaigns delivering Sainbox RAT and ValleyRAT contain some similar tactics, techniques, and procedures (TTPs). However, research into additional activity clusters utilizing these malwares demonstrate enough variety in infrastructure, sender domains, email content, targeting, and payloads that researchers currently conclude that all use of these malwares and associated campaigns are not attributable to the same cluster, but likely multiple distinct activity sets. 
+
+The emergence and uptick of both novel and older Chinese-themed malware demonstrates a new trend in the overall 2023 threat landscape. A blend of historic malware such as Sainbox – a variant of the older Gh0stRAT malware – and the newly uncovered ValleyRAT may challenge the dominance that the Russian-speaking cybercrime market has on the threat landscape. However, the Chinese-themed malware is currently mostly targeted toward users that likely speak Chinese. Proofpoint continues to monitor for evidence of increasing adoption across other languages. 
+
+For network defenders, we include several indicators of compromise and Emerging Threats detections to provide the community with the ability to cover these threats.
+
+Campaign Details 
+
+Proofpoint has observed over 30 campaigns in 2023 leveraging malware typically associated with Chinese cybercrime activity. Nearly all lures are in Chinese, although Proofpoint has also observed messages in Japanese targeting organizations in that country. 
+
+Gh0stRAT / Sainbox
+
+Proofpoint has observed an increase in a variant of Gh0stRAT Proofpoint researchers refer to as Sainbox. Sainbox was first identified by Proofpoint in 2020 and is referred to as FatalRAT by third-party researchers. Since April 2023, Proofpoint has identified nearly 20 campaigns delivering Sainbox after being completely absent from the email threat landscape for years. 
+
+Gh0stRAT is a RAT that was first observed in 2008. The builder for this RAT is available online. The source code is also publicly available and various modifications have been made to Gh0stRAT over the years by multiple authors and threat actors, including forked variants like Sainbox. Proofpoint has also observed a handful of Chinese language campaigns in 2023 delivering older Gh0stRAT variants.
+
+Nearly all the observed Sainbox campaigns used invoice themed lures which spoofed Chinese office and invoicing companies. The emails were typically sent from Outlook or other freemail email addresses and contained URLs, or Excel attachments containing URLs, that linked to a zipped executable that installed Sainbox. 
+
+For example, on 17 May 2023, Proofpoint observed a campaign targeting dozens of companies, the majority of which included those in the manufacturing and technology sectors. Emails purported to be:
+
+From: "友发票 "  (Machine translation: “UF Invoice”)
+With Subject: 《发票信息》(Machine translation: “Invoice Information”)
+
+
+
+Figure 1: Email sample from 17 May 2023 delivering Sainbox. 
+
+These emails contained a URL which linked to a zipped executable, “26866498.exe”. If executed, it led to the installation of Sainbox RAT associated with the command and control (C2) “fakaka16[.]top:3366.” Proofpoint observed nearly 10 Sainbox RAT campaigns where the C2 had variations of “fakaka” in the domain, sometimes ending in a number increasing in sequential order. Additionally, “Jiangsu Bangning Science & Technology Co. Ltd” is responsible for the registration of several C2 domains associated with this actor starting with fakaka9[.]top in March 2023. 
+
+The majority of Sainbox RAT campaigns occurred between December 2022 and May 2023. Retrospective analysis of identified campaigns uncovered one more campaign in Proofpoint data using similar TTPs in April 2022. Proofpoint continues to see additional campaigns associated with this activity cluster in August 2023.
+
+Purple Fox
+
+The malware component of Purple Fox has been available since at least 2018. It is delivered via various methods, including historically via the Purple Fox Exploit Kit. In recent years, public reporting identified examples of Purple Fox malware delivery that was masquerading as legitimate application installers. 
+
+Proofpoint identified at least three campaigns delivering Purple Fox. While historic activity aligns with what Proofpoint considers Chinese-themed, it is rarely observed in our threat data. Notably, one observed campaign used Japanese language invoice themes targeting organizations in Japan to deliver zipped LNK attachments that led to the installation of Purple Fox, while others used Chinese language invoice themed messages with URLs leading to Purple Fox.
+
+Proofpoint does not attribute all the Chinese-themed malware campaigns to the same threat actor at this time, but some activity clusters do overlap, suggesting threat actors may be using the same infrastructure to deliver multiple malware families.
+
+A New Malware Joins the Fray
+
+ValleyRAT
+
+In March 2023, Proofpoint identified a new malware we dubbed ValleyRAT. The campaigns distributing this malware were conducted in Chinese, and, following the trend of other Chinese malware campaigns, the majority used invoice themes related to various Chinese businesses. In 2023, Proofpoint has observed at least six campaigns delivering ValleyRAT malware. 
+
+The first campaign was observed on 21 March 2023. Emails contained a URL that led to a zipped executable that downloaded the ValleyRAT payload. Subsequent campaigns contained similar TTPs including using freemail senders such as Outlook, Hotmail and WeCom to deliver URLs leading to the installation of ValleyRAT. However, in at least one campaign, the RAT was delivered via a Rust language-based loader still currently under investigation. The loader additionally downloaded a legitimate tool, EasyConnect in addition to a trojanized DLL that the tool would load and execute via DLL search order high jacking. EasyConnect is an SSL VPN appliance that enables remote access and management of Windows hosts. Subsequent campaigns in June 2023 included the same TTPs. 
+
+ValleyRAT was first publicly reported on by the Chinese cybersecurity firm Qi An Xin earlier this year. 
+
+While most of the campaigns used invoice themed lures, Proofpoint observed one outlier campaign on 24 May 2023 that used resume-themed PDFs containing URLs that, if clicked, downloaded a remote, zipped payload to install ValleyRAT. 
+
+
+
+Figure 2: PDF lure used to deliver ValleyRAT. 
+
+Analysis of the newly observed ValleyRAT indicates the possibility that one group is behind both the new malware campaigns and the resurgence of the older Purple Fox and Sainbox malware, but the timing may be coincidental rather than directly attributable. 
+
+Malware Analysis
+
+ValleyRAT initially begins by searching for the existence of the directory "C:\Program Files\VMware\VMware Tools" on the victim machine. It then proceeds to search for specific processes within that directory: "VMwareService.exe", "VMwareTray.exe", and "VMwareUser.exe". The next step involves a check to see if the computer is part of the "WORKGROUP" or not. It then performs a check on the total physical memory to determine if it is below the threshold of 1,173,624,064 bytes. Finally, the program checks if the size of the hard disk drive (HDD) is below 110GB, these checks are basic virtualization or emulation checks to attempt to identify if the payload is being executed within in a virtual environment.
+
+ValleyRAT is a RAT written in C++, compiled in Chinese and demonstrates the functionalities of a typically basic RAT. The following table is an overview of the commands that are currently implemented in what Proofpoint assess is version 3.0 of ValleyRAT, an assessment derived from a “version” number that returns a 3.0 string value. When the system information packet is sent, the C2 replies with command packets. It currently has the following commands implemented:
+
+
+			Command
+			
+			
+			Description
+			
+		
+			0x00
+			
+			
+			Plugin cleanup, and get system's process list. Client replies with a STRUCT_PACKET_PROCESS_LIST structure.
+			
+		
+			0x01
+			
+			
+			Reply with STRUCT_PACKET_0x02 structure, that contains the exact data originally sent to the Client. This is probably implemented as anti-bot verification or as a PING→PONG packet.
+			
+		
+			0x02
+			
+			
+			Drops and executes a DLL
+			
+		
+			0x04
+			
+			
+			Drops and executes a DLL (Second Method)
+			
+		
+			0x05
+			
+			
+			Plugin cleanup, replays with a STRUCT_PACKET_0x05 structure.
+			
+		
+			0x06
+			
+			
+			Get system's process list. Client replies with a STRUCT_PACKET_PROCESS_LIST structure.
+			
+		
+			0x07
+			
+			
+			Drops and executes any type of file (document, image, etc)
+			
+		
+			0x08
+			
+			
+			Downloads and executes an executable file.
+			
+		
+			0x09
+			
+			
+			Sets the Client to start at system startup.
+			
+		
+			0x0A
+			
+			
+			Sets the "BEIZHU" ("remark") or "FENZU" ("subgroup") registry keys.
+			
+		
+			0x64
+			
+			
+			Stops the client, without terminating the process.
+			
+		
+			0x65
+			
+			
+			Starts the client
+			
+		Table 1: ValleyRAT commands and associated descriptions.
+
+Packet Process List
+
+
+
+Figure 3: Structure which defines the content of a packet sent to the C2 to describe running processes, window names, etc. 
+
+
+
+Figure 4: Structure which defines the content of a packet sent to the C2 to indicate a plugin has been cleaned up.
+
+Communication Protocol
+
+The malware uses raw sockets with a custom protocol to communicate with the C2 (see Figure 7 for packet encoding). Before receiving any commands from the Server, the Client announces itself by sending a packet containing system information, formatted in the following structure:
+
+
+
+Figure 5: Structure which defines the content of the initial system information beacon that it sends to the C2 to identify a newly infected victim.
+
+
+
+Figure 6: Network Decoding Algorithm. 
+
+SystemID Generation Algorithm
+
+ValleyRAT generates an MD5 digest of the following values: OS Info, Kernel Version, CPU Name, Architecture, IsAdmin, Hardware Profile GUID to use as a System Identifier (SystemID). Below is a reimplementation of this in Python.
+
+
+
+Figure 7: SystemID generation.
+
+Conclusion
+
+For over a decade, Gh0stRAT and related variants have been consistently exploited in various circles. Proofpoint recently observed a minor resurgence in the use of Sainbox and other Chinese-themed malware, piquing the interest of analysts who can assess the broader impact of older malware. With this resurgence, the questions arise: is the impact of older malware easier to detect due to its age? Does mature detection always mean mature security? Based on Proofpoint’s analysis, the answer is not necessarily, as older malware can still be effective, especially when threat actors constantly change tactics by rotating IPs, domains, encoding, and obfuscation. Consequently, even though these malware families are not new, organizations cannot afford to underestimate the risk they pose.
+
+Proofpoint research suggests that this activity does not seem to be related to a single entity but rather appears to be a cluster of activities based on temporal patterns. The appearance of ValleyRAT alongside the older families hints at the possibility of their relation in terms of timing. Proofpoint anticipates ValleyRAT will be used more frequently in the future.  
+
+Raising awareness in 2023 about the reappearance of these threats serves as an informational bulletin for the community. While new and sophisticated threats seemingly dominate the daily threat landscape, it is essential to maintain a balanced perspective by acknowledging seemingly less significant risks that persist. Despite being neither new nor advanced, Sainbox RAT still poses a threat in 2023, and ValleyRAT is an emerging threat in this space. 
+
+Emerging Threats Signatures
+
+2045774 - ET INFO Observed URL Shortening Service Domain in DNS Lookup (dwz .mk)
+	2045775 - ET INFO Observed URL Shortening Service Domain (dwz .mk in TLS SNI)
+	2854367 - ETPRO MALWARE Win32/ValleyRat CnC Activity (GET) M1
+	2854368 - ETPRO MALWARE Win32/ValleyRat CnC Activity (GET) M2
+	2854369 - ETPRO MALWARE Win32/ValleyRat CnC Activity via tcp Outbound
+	2854370 - ETPRO MALWARE Win32/ValleyRat CnC Activity via tcp Inbound 
+	2854371 - Suspicious User-Agent in HTTP Request (GameInfo)
+	2044739 - ET INFO Chinese CDN Domain in DNS Lookup (ctcontents .com) (info.rules)
+Example IOCs
+
+
+			Indicator
+			
+			
+			Description
+			
+			
+			First Observed
+			
+		
+			hxxp://rus3rcqtp[.]hn-bkt[.]clouddn[.]com/26866498[.]zip
+			
+			
+			Sainbox Payload URL
+			
+			
+			May-23
+			
+		
+			0d133dde99d883274bf5644bd9e59af3c54c2b3c65f3d1bc762f2d3725f80582
+			
+			
+			Sainbox Executable SHA256
+			
+			
+			May-23
+			
+		
+			fakaka16[.]top:3366
+			
+			
+			Sainbox C2
+			
+			
+			May-23
+			
+		
+			lwplbh@cluedk[.]com
+			
+			
+			Sainbox Sender Email
+			
+			
+			May-23
+			
+		
+			7f32ca98ce66a057ae226ec78638db95feebc59295d3afffdbf407df12b5bc79
+			
+			
+			Sainbox Executable SHA256
+			
+			
+			Aug-23
+			
+		
+			kakafa[.]top:3367
+			
+			
+			Sainbox C2
+			
+			
+			Aug-23
+			
+		
+			q1045582630@qq[.]com
+			
+			
+			Sainbox Sender Email
+			
+			
+			Aug-23
+			
+		
+			hxxp://51fapiaoyun[.]com/%E5%8F%91-%E7%A5%A8[.]rar
+			
+			
+			ValleyRAT Payload URL
+			
+			
+			Mar-23
+			
+		
+			http://124[.]220[.]35[.]63/laoxiang[.]exe
+			
+			
+			ValleyRAT Payload URL
+			
+			
+			Mar-23
+			
+		
+			cjkmj@51fapiao[.]com
+			
+			
+			ValleyRAT Sender Email
+			
+			
+			Mar-23
+			
+		
+			a48abe2847e891cfd6c18c7cdaaa8e983051bc2f7a0bd9ef5c515a72954e1715
+			
+			
+			PDF Used to Deliver ValleyRAT SHA256
+			
+			
+			May-23
+			
+		
+			a48abe2847e891cfd6c18c7cdaaa8e983051bc2f7a0bd9ef5c515a72954e1715
+			
+			
+			ValleyRAT Executable
+			
+			
+			May-23
+			
+		
+			C:\Users\77\source\repos\Project8\Debug\Project8.pdb
+			
+			
+			ValleyRAT PDB File Path
+			
+			
+			May-23
+			
+		
+			hxxps://drfs[.]ctcontents[.]com/file/40788929/860577489/
+			0823d7/%E4%B8%AA%E4%BA%BA%E7%AE%80%E5%8E%862023[.]rar
+			
+			
+			ValleyRAT Payload URL
+			
+			
+			May-23
+			
+		
+			aa0035@zohomail[.]cn
+			
+			
+			ValleyRAT Sender Email
+			
+			
+			May-23
+			
+		
+			hxxp://ckj2[.]cn/R8F
+			
+			
+			ValleyRAT Payload URL
+			
+			
+			May-23
+			
+		
+			4f01ffe98009a8090ea8a086d21c62c24219b21938ea3ec7da8072f8c4dcc7a6
+			
+			
+			ValleyRAT Executable
+			
+			
+			May-23
+			
+		
+			vip66@xqxayjrk101[.]wecom[.]work
+			
+			
+			ValleyRAT Sender Email
+			
+			
+			May-23
+			
+		
+			hxxps://zc1800[.]oss-cn-shenzhen[.]aliyuncs[.]com/piao
+			
+			
+			ValleyRAT Payload URL
+			
+			
+			Jun-23
+			
+		
+			qdjvqvumsdw@hotmail[.]com
+			
+			
+			ValleyRAT Sender Email
+			
+			
+			Jun-23
+			
+		
+			hxxps://fhyhdf[.]oss-cn-hangzhou[.]aliyuncs[.]com/%E7%99%BC%E7%A5%A8[.]zip
+			
+			
+			ValleyRAT Payload URL
+			
+			
+			Jun-23
+			
+		
+			kweffabibis0@outlook[.]com
+			
+			
+			ValleyRAT Sender Email
+			
+			
+			Jun-23
+]]></content:encoded>
+<pubDate>Wed, 20 Sep 2023 05:00:00 -0700</pubDate>
+<pubDate>Wed, 20 Sep 2023 05:00:00 -0700</pubDate>
+</item>
+<item>
+<title>Out of the Sandbox: WikiLoader Digs Sophisticated Evasion</title>
+<link>https://www.proofpoint.com/us/blog/threat-insight/out-sandbox-wikiloader-digs-sophisticated-evasion</link>
+<guid>https://www.proofpoint.com/us/blog/threat-insight/out-sandbox-wikiloader-digs-sophisticated-evasion</guid>
+<content:encoded><![CDATA[
+
+Key Takeaways
+
+Proofpoint identified a new malware we call WikiLoader.
+	It has been observed delivered in multiple campaigns conducted by threat actors targeting Italian organizations. 
+	The malware uses multiple mechanisms to evade detection. 
+	It is named WikiLoader due to the malware making a request to Wikipedia and checking that the response has the string “The Free” in the contents. 
+	It is likely the use of this malware is available for sale to multiple cybercriminal groups. 
+Overview
+
+Proofpoint researchers identified a new malware we call WikiLoader. It was first identified in December 2022 being delivered by TA544, an actor that typically uses Ursnif malware to target Italian organizations. Proofpoint observed multiple subsequent campaigns, the majority of which targeted Italian organizations. 
+
+WikiLoader is a sophisticated downloader with the objective of installing a second malware payload. The malware contains interesting evasion techniques and custom implementation of code designed to make detection and analysis challenging. WikiLoader was likely developed as a malware that can be rented out to select cybercriminal threat actors.
+
+Based on the observed use by multiple threat actors, Proofpoint anticipates this malware will likely be used by other threat actors, especially those operating as initial access brokers (IABs).
+
+Campaign Delivery
+
+Proofpoint researchers discovered at least eight campaigns distributing WikiLoader since December 2022. Campaigns began with emails containing either Microsoft Excel attachments, Microsoft OneNote attachments, or PDF attachments. Proofpoint has observed WikiLoader distributed by at least two threat actors, TA544 and TA551, both targeting Italy. While most cybercriminal threat actors have pivoted away from macro enabled documents as vehicles for malware delivery, TA544 has continued to use them in attack chains, including to deliver WikiLoader. 
+
+The most notable WikiLoader campaigns were observed on 27 December 2022, 8 February 2023, and 11 July 2023, as described below. WikiLoader has been observed installing Ursnif as a follow-on payload.
+
+The first campaign in Proofpoint data distributing WikiLoader was observed on 27 December 2022. Proofpoint researchers observed a high-volume malicious email campaign targeting companies in Italy, which began with emails containing a Microsoft Excel attachment spoofing the Italian Revenue Agency. The Microsoft Excel attachments contained characteristic VBA macros which, if enabled by the recipient, would download and execute a new unidentified downloader that Proofpoint researchers eventually dubbed WikiLoader. This campaign was attributed to TA544.
+
+
+
+Figure 1: Screenshot of an Excel attachment used in the 27 December 2022 campaign.
+
+Proofpoint researchers identified an updated version of WikiLoader used in a campaign on 8 February 2023 in another high volume, Italian-targeted campaign, attributed to TA544. The campaign spoofed an Italian courier service and contained VBA macro enabled Excel documents that, if enabled by the recipient, would lead to the installation of WikiLoader which subsequently downloaded Ursnif. This version of WikiLoader contained more complex structures, additional stalling mechanisms used in an attempt to evade automated analysis, and the use of encoded strings.
+
+
+
+Figure 2: Screenshot of email lure in Italian targeted campaign on 8 February 2023. 
+
+
+
+Figure 3: Excel document containing macros used in the 8 February 2023 campaign. 
+
+On 31 March 2023, Proofpoint observed WikiLoader delivered by TA551 using OneNote attachments containing embedded executables. The OneNote attachments contained a hidden CMD file behind an “OPEN” button which, if clicked by the recipient, downloaded and executed WikiLoader. This campaign, with messages and lures written in Italian, also targeted Italian organizations, and was the first time Proofpoint observed WikiLoader used by an actor other than TA544. 
+
+On 11 July 2023, researchers identified additional changes to the actively developed malware in the protocol used for reaching compromised webhosts, exfiltration of host information via HTTP cookies, additional stalling mechanisms requiring the sample to run for an extended time, and the processing of shellcode. In this campaign, TA544 used accounting themes to deliver PDF attachments with URLs that led to the download of a zipped JavaScript file. If the JavaScript was executed by the recipient, it led to the download and execution of the packed downloader, WikiLoader. Notably, this campaign was high-volume, including over 150,000 messages, and did not exclusively target Italian organizations like previously observed campaigns. 
+
+
+
+Figure 4: Example email used in the 11 July campaign.
+
+
+
+Figure 5: Example PDF document used in the 11 July campaign.
+
+Malware
+			Attachment Type
+			Date
+			Actor
+			Targeting
+		WikiLoader
+			PDF
+			11 July 2023
+			TA544
+			 
+		WikiLoader
+			OneNote
+			31 March 2023
+			TA551
+			Italy
+		WikiLoader
+			PDF
+			16 March 2023
+			TA544
+			Italy
+		WikiLoader
+			Excel
+			16 February 2023
+			TA544
+			Italy
+		WikiLoader / Ursnif "5050"
+			Excel
+			8 February 2023
+			TA544
+			Italy
+		WikiLoader / Ursnif "5050"
+			Excel
+			31 January 2023
+			TA544
+			Italy
+		WikiLoader / Ursnif "5050"
+			Excel
+			11 January 2023
+			TA544
+			Italy
+		WikiLoader / Ursnif "5050"
+			Excel
+			27 December 2022
+			TA544
+			Italy
+		Figure 6: Table of confirmed WikiLoader campaigns observed in Proofpoint data.
+
+WikiLoader Malware Analysis
+
+The sample used for the following technical analysis was observed on 8 February 2023, and demonstrates the full execution chain from initial loader to final payload. There have been some updates since this analysis, and they will be documented at the end of this report. 
+
+First Stage of WikiLoader: The Packed Loader
+
+
+
+Figure 7: Attack chain from the 8 February 2023 TA544 campaign delivering Ursnif. Stage 1 is the packed DLL. 
+
+The use of packed downloaders is a common technique employed by threat actors to evade detection and analysis. This generally means the delivered executable is smaller since it serves the purpose of downloading the actual payload rather than having it embedded in the file. Another advantage of doing this is that threat actors can control the delivery of payloads. They can include IP filtering or enable downloads for just the first 24 hours of the campaign.
+
+The first stage of WikiLoader is highly obfuscated. Most of the call instructions have been replaced with a combination of push/jmp instructions to recreate the actions of a return without having to explicitly use the return instruction. This causes issues with common analysis tools such as IDA Pro and Ghidra. In addition to these features, WikiLoader also uses indirect syscalls in an attempt to evade endpoint detection and response (EDR) solutions and sandbox hooks. 
+
+Control Flow Obfuscation
+
+In the example below, WikiLoader obfuscates its control flow by first pushing the address of the function it wants to call from RCX onto the stack (push RCX). Then, it calculates an address that is in the middle of the instruction at address 0x1800E2F41, five bytes into the "sub RAX, 22C3246E" instruction, which is the location of the byte "C3". When interpreted as an x86 assembly instruction, "C3" is ret, which is the return instruction normally called at the end of a function. Calling ret will treat the address on the top of the stack as the address to return to, effectively jumping to the function whose address was pushed just a few instructions ago while completely confusing programs used for disassembly and analysis.
+
+
+
+Figure 8: Screenshot showing Wikiloader jumping within a sub instruction.
+
+The following figure shows the exact same set of bytes but being disassembled from the correct offset which properly shows the instruction is being interpreted as a return instruction rather than the sub instruction it was initially displayed as. 
+
+
+
+Figure 9: The same data shown in Figure 8 interpreted differently to show a return instruction.
+
+The malware starts by finding the address of NtCreateThreadEx which allows it to spawn a thread pointing to GetModuleFileNameA. While searching for the correct NT API, the malware also ensures that no trampolines or hooks have been placed within the NT function. This is a technique sandboxes and EDR systems use to be able to trace and intercept function calls. At the beginning of the function, these systems will replace bytes with a new instruction that is controlled by the sandbox or EDR. This technique can be detected by checking the initial bytes of a given function. The newly created thread is started in a suspended state and a flag is passed to hide the thread from a debugger. Once the thread is created, the malware uses a combination of NtGetContextThread and NtSetContextThread to modify the instruction pointer to point to the decrypted shellcode. With RIP replaced, the malware resumes the thread with NtResumeThread initiating the next stage. 
+
+
+
+Figure 10: Overview of syscall invocation for CreateThreadEx. 
+
+WikiLoader uses NTSetContextThread to set RIP to the decrypted shellcode. This user code is the next stage of the malware (Figure 11) which was decrypted earlier via a single byte XOR key.
+
+Second Stage of WikiLoader: Shellcode
+
+
+
+Figure 11: Attack chain from the 8 February 2023 TA544 campaign delivering Ursnif, stage 2 is decrypted by a single byte XOR key. 
+
+The second stage of WikiLoader serves the purpose of decrypting the next stage of shellcode. Stage 3 is encrypted via a single byte XOR key and placed at the end of the stage 2 shellcode. Stage 2 finds a reference to the start of stage 3, decrypts it via the XOR key and transfers execution. The next stage of the shellcode starts at the end of the last function for stage 2. 
+
+
+
+Figure 12: Screenshot of the final function in the stage 2 shellcode, with the stage 3 shellcode coming right after.
+
+Third Stage of Packed Loader: Shellcode 
+
+
+
+Figure 13: Attack chain from the 8 February 2023 TA544 campaign delivering Ursnif, stage 3 is the main stage where most functionality is used. 
+
+The third stage of the WikiLoader chain is the main stage where most of the loader functionality is used. The strings in the following steps are decoded by skipping over every even character, taking just the first, third, fifth characters and so on. (Figure 14). For example, the string “SJlgeAeNpG” would decode to “Sleep”. The loader makes an HTTPS request to Wikipedia.com and checks that the response has the string “The Free” in the contents (Figure 15). This is likely an evasive maneuver to prevent detonation in automated analysis environments to ensure the device is connected to the internet and not in a simulated environment blocked from external connections. The loader then intentionally makes a request to an unregistered domain. If a valid response is returned, the malware terminates. This is another evasive maneuver as some automated analysis environments are programmed to automatically return a valid response to all DNS queries by default to encourage malware to continue execution. For organizations with DNS logs or EDR systems that record DNS lookups, searching for lookups of the unique domains used by WikiLoader is one way to identify infected systems.
+
+
+
+Figure 14: Shellcode stage 3 entrypoint.
+
+
+
+Figure 15: Screenshot of where the loader checks connectivity to Wikipedia.
+
+
+
+Figure 16: Screenshot of the Wikipedia URL checked by the loader rendered in a browser.
+
+The loader then checks GetTickCount64 (Figure 17). If the value returned is less than 125, the loader will make a request to a specified, hardcoded URL. If the value returned is more than 125, the loader will make a request to a different hardcoded URL. While this boolean check exists, it is unclear why the authors decided to make it switch depending on the tick count. Specifically, this tick count is the number of milliseconds that have passed since the system was started. Later versions of this loader iterate over a set of URLs and make requests until a valid response is given. The response page has a comment containing the string “gmail” followed by base64 encoded text (Figure 18). The loader locates the gmail string and uses it as an anchor to retrieve the base64 text, decodes the text, replaces any “+” characters with a “/” character, then appends the resulting string to a hardcoded URL pointing to Discord (Figure 19). The base64 encoded text is the file path required to retrieve the next stage hosted on Discord’s CDN. While the threat actors are using Discord resources, this does not mean that Discord itself has been compromised. Rather the actors uploaded the sample in any Discord chat and copied the link to the attachment. 
+
+
+
+Figure 17: Screenshot of GetTickCount64 use.
+
+
+
+Figure 18: Gmail anchor string followed by base64 encoded URI located in the payload URL webpage.
+
+
+
+Figure 19: Decoded URL of the next stage payload.
+
+Fourth Stage of Packed Loader: Shellcode
+
+
+
+Figure 20: Attack chain from the 8 February 2023 TA544 campaign delivering Ursnif, stage 4 is when the shellcode is downloaded and executed from Discord. 
+
+The shellcode downloaded and executed from Discord follows the same process as the previous stage by checking for kernel32.dll, GetProcAddress, using the same string decoding, and using GetTickCount64 to choose the next URL hardcoded string. The URLs contained in this stage are the same as in the previous stage, with the exception that the URI contains “id=2” instead of “id=1” (Figure 21). The loader follows the same process of locating the “gmail” string, using it as an anchor to decode and replace characters to be used in the URI to determine the location of the next file hosted on Discord, but this time, the file retrieved is XOR encoded with a hardcoded, single byte. After decoding the file, it is executed (Figure 21).
+
+
+
+Figure 21: URI with id=2 hardcoded to find and decode the URI, then the URI appended to a hardcoded file location hosted on Discord.
+
+Fifth Stage of Packed Loader: Encoded PE
+
+
+
+Figure 22: Attack chain from the 8 February 2023 TA544 campaign delivering Ursnif, stage 5.
+
+The PE file downloaded as the fifth stage contains 16 encoded bytes (Figure 23). The loader must drop every other byte of the first 16 bytes to create a valid PE file. The final payload in this case is the Ursnif banking trojan with GroupID “5050”.
+
+
+
+Figure 23: PE file showing PE file with the first 16 bytes encoded.
+
+Network Infrastructure
+
+Given the odd paths the malware used to retrieve the filenames, it appeared as if these sites were compromised hosts. This is a common technique used by threat actors, as it allows them to leverage preexisting infrastructure without having to give registration information or pay for the actual host. Sometimes this comes with the added benefit for the threat actor, that the site is trusted and might result in higher infection rates. The downside of this technique is the threat actors don’t have much control over the hosts, and they can sometimes go offline or have the malicious code removed. The upstream PHP contains either one or two IPs with a hardcoded path. Depending on whether WikiLoader is sending a “?id=1” or a “?id=2” request determines which IP is used. In some cases, these IPs are the same, which suggests they are copies of each other or two IPs pointing to the same host. In later versions of this upstream PHP, host information is gathered and sent via HTTP cookies. These cookies contain basic host information, and a unique identifier for tracking purposes.
+
+
+
+Figure 24: PHP upstream to return either the next stage shellcode, or the PE payload.
+
+WikiLoader Malware Evolution 
+
+Proofpoint researchers have observed at least three different versions of the malware, which indicates it is undergoing active development. The following is a timeline with the relevant differences and updates observed in each version.
+
+First version | 27 December 2022:
+
+No string encoding within the shellcode layers
+	Structures used for indirect syscalls were simpler 
+	Shellcode layers didn’t contain as much obfuscation
+	Fewer APIs were used within the shellcode layer
+	Potentially one less stage of shellcode
+	The fake domain was manually created rather than via automation 
+Second version | 8 February 2023
+
+Added complexity to the syscall structure
+	Implemented more busy loops
+	Began using encoded strings
+	Started deleting artifacts from file download
+Third version | 11 July 2023
+
+Strings still encoded via skip encoding
+	New technique for implementing indirect syscalls
+	The second filename is pulled via the MQTT protocol rather than reaching the compromised webhosts
+	Cookies are exfiltrated from the loader which contain basic host information
+	Full execution of the loader takes almost an hour given the abundance of busy loops
+	Shellcode stages are written byte by byte via NtWriteVirtualMemory rather than a single pass
+Conclusion
+
+So far, Proofpoint has only observed WikiLoader deliver Ursnif as a second-stage payload. However, given its use by multiple threat actors, it is possible more ecrime actors, especially those operating as IABs, will use WikiLoader in the future as a mechanism to deliver additional malware payloads. 
+
+Based on analysis of multiple versions, Proofpoint assesses with high confidence this malware is in rapid development, and the threat actors are attempting to make the loader more complicated, and the payload more difficult to retrieve. 
+
+WikiLoader is delivered via activities regularly observed by threat actors, including macro-enabled documents, PDFs containing URLs leading to a JavaScript payload, and OneNote attachments with embedded executables. Thus, user interaction is required to begin the malware installation. Organizations should ensure macros are disabled by default for all employees, block the execution of embedded external files within OneNote documents, and ensure JavaScript files are opened by default in a notepad or similar application, by adjusting default file extension associations via group policy object (GPO).
+
+Researchers would like to thank @JAMESWT_MHT for their public work in identifying and uploading related samples to public malware repositories. 
+
+Emerging Threats Signatures
+
+2046966 - ET MALWARE WikiLoader Activity M1 (GET)
+2046967 - ET MALWARE WikilLoader Activity M1 (Response)
+2046968 - ET MALWARE WikilLoader Activity M2 (Response)
+2046969 - ET MALWARE WikilLoader Activity M3 (Response)
+2046970 - ET MALWARE WikiLoader Activity M2 (GET)
+2046971 - ET HUNTING Possible WikiLoader Activity (GET)
+
+IOCS
+
+
+			Indicator
+			
+			
+			Description
+			
+			
+			First Seen
+			
+		
+			hxxps://cdn[.]discordapp[.]com/attachments/1128405963062378558/1128406314452799499/dw4qdkjbqwijhdhbwqjid.iso
+			
+			
+			JS Payload
+			
+			
+			July 2023
+			
+		
+			hxxps://inspiration-canopee[.]fr/vendor/fields/assets/idnileeal/sifyhewmiyq/3jnd9021j9dj129.php
+			
+			
+			WikiLoader Coms
+			
+			
+			July 2023
+			
+		
+			hxxps://cdn[.]discordapp[.]com/attachments/1124390807626076192/1128383419970240662/s42.iso
+			
+			
+			WikiLoader Payload
+			
+			
+			July 2023
+			
+		
+			hxxps://www[.]p-e-c[.]nl/wp-content/themes/twentytwentyone/hudiiiwj1.php?id=1
+			
+			
+			WikiLoader Request
+			
+			
+			July 2023
+			
+		
+			hxxps://vivalisme[.]fr/forms/forms/kiikxnmlogx/frrydjqb/vendor/9818hd218hd21.php?id=1
+			
+			
+			WikiLoader Request
+			
+			
+			July 2023
+			
+		
+			hxxps://inspiration-canopee[.]fr/vendor/fields/assets/idnileeal/sifyhewmiyq/3jnd9021j9dj129.php?id=1
+			
+			
+			WikiLoader Request
+			
+			
+			July 2023
+			
+		
+			hxxps://tournadre[.]dc1-mtp[.]fr/wp-content/plugins/kona-instagram-feed-for-gutenbargwfn/4dionaq9d0219d.php?id=1
+			
+			
+			WikiLoader Request
+			
+			
+			July 2023
+			
+		
+			hxxps://studiolegalecarduccimacuzzi[.]it/Requests/tmetovcqhnisl/vendor/gyuonfuv/languages/vgwtdpera/Requests/5i8ndio12niod21.php?id=1
+			
+			
+			WikiLoader Request
+			
+			
+			July 2023
+			
+		
+			hxxps://www[.]astrolabecommunication[.]fr/wp-includes/9d8n190dn21.php?id=1
+			
+			
+			WikiLoader Request
+			
+			
+			July 2023
+			
+		
+			1d1e2c0946cd4e22fff380a3b6adf38e7c8b3f2947db7787d00f7d9db988dad2
+			
+			
+			JS SHA256
+			
+			
+			July 2023
+			
+		
+			hxxps://nikotta[.]com/subtotal
+			
+			
+			JS Payload
+			
+			
+			July 2023
+			
+		
+			69a6476d6f7b312cc0d9947678018262737417e02ebfe168f8d17babed24d657
+			
+			
+			Excel SHA256
+			
+			
+			July 2023
+			
+		
+			d49c2e47c8e14cc01f0a362293c613ea9604e532ff77b879d69895473dfbeb03
+			
+			
+			Excel SHA256
+			
+			
+			July 2023
+			
+		
+			95125db52cdc7870b35c3762bad0ea18944aaed9503c3f69b30beb6ca7bae7e7
+			
+			
+			Excel SHA256
+			
+			
+			July 2023
+			
+		
+			1e5035723637c2f4a26d984e29d17cf164f3846f82eb0b7667efa132a2ea0187
+			
+			
+			Excel SHA256
+			
+			
+			July 2023
+			
+		
+			18a088a190263275172a28d387103e83b8940e51e96cb518ed41a1960c772bba
+			
+			
+			Excel SHA256
+			
+			
+			July 2023
+			
+		
+			eaa1be7a91c4f1370d2ad566f8625e3e5bb7c58d99a9e2e3a80e83ce80904e11
+			
+			
+			Excel SHA256
+			
+			
+			July 2023
+			
+		
+			1eb5d4ae5114979908bfbf8a617b2084b101e9eda92532cf81b2a527c27d91a5
+			
+			
+			Excel SHA256
+			
+			
+			July 2023
+			
+		
+			46c2e0ffadf801900fbff964ba2af5e24fee3209d1011bb46529ba779ff79e93
+			
+			
+			Excel SHA256
+			
+			
+			July 2023
+			
+		
+			8d4701f33c05851f41eedb98bfff0569b7f4fae3352e2081f01b3add0a97936c
+			
+			
+			Excel SHA256
+			
+			
+			July 2023
+			
+		
+			9a74befc4a4dab4c5032d64fcf9723b67e73ae9d5280fb9fb54f225febba03fe
+			
+			
+			Excel SHA256
+			
+			
+			July 2023
+			
+		
+			f88526be804223cae5b4314b9bc0f01c24352caa7ec2c7a2f8b6b54c2e902acc
+			
+			
+			Excel SHA256
+			
+			
+			July 2023
+			
+		
+			9782f11930910c7d24dea71a7a21f40f19623b214cb1848bf9f4d49b858c8379
+			
+			
+			Excel SHA256
+			
+			
+			July 2023
+			
+		
+			9feb868d39b13e395396ea86ddbf05c4820dd476b58b6b437eff1e0b91e2615c
+			
+			
+			Excel SHA256
+			
+			
+			July 2023
+			
+		
+			hxxps://www[.]ilfungodilacco[.]it/wp-content/themes/twentytwentyone/fnc.php?id=1
+			
+			
+			WikiLoader Request
+			
+			
+			February 2023
+			
+		
+			hxxps://www[.]centrograndate[.]it/plugins/content/jw_sigpro/jw_sigpro/includes/js/jquery_colorbox/example4/images/border3.php?id=1
+			
+			
+			WikiLoader Request
+			
+			
+			February 2023
+			
+		
+			hxxp://www[.]bbpline.com
+			
+			
+			Excel Payload
+			
+			
+			February 2023
+			
+		
+			86966795bbd054104844cdab7efcafb0b1879a10aae5c0fefbbc83d1ebccbc98
+			
+			
+			Excel SHA256
+			
+			
+			February 2023
+			
+		
+			e0a1ffff9d5c6eaaa2e57548d8db2febbe89441a76f58feae8256ab69f64c88b
+			
+			
+			Excel SHA256
+			
+			
+			February 2023
+			
+		
+			2505b1471e26a303d59e5fc5f0118729a9eead489ffc6574ea2a7746e5db722d
+			
+			
+			Excel SHA256
+			
+			
+			February 2023
+			
+		
+			6e494eb76d75ee02b28e370ab667bcbcdc6f5143ad522090f4b8244eb472d447
+			
+			
+			Excel SHA256
+			
+			
+			February 2023
+			
+		
+			44abd30e18e88e832a65a29ce56c9c570d7f0a3b93158e5059722d89782a750c
+			
+			
+			Excel SHA256
+			
+			
+			February 2023
+			
+		
+			d16c5485f3f01fe0d0ce9387e9c92b561ef4d42f0a22dde77f18a424079c87cd
+			
+			
+			Excel SHA256
+			
+			
+			February 2023
+			
+		
+			0e518e2627350ec0ab61fce3713644726eb3916563199187ef244277281cd35b
+			
+			
+			Excel SHA256
+			
+			
+			February 2023
+			
+		
+			https://sunniznuhqan[.]com
+			
+			
+			Excel Payload
+			
+			
+			December 2022
+			
+		
+			0b02cfe16ac73f2e7dc52eaf3b93279b7d02b3d64d061782dfed0c55ab621a8e
+			
+			
+			WikiLoader SHA256
+			
+			
+			December 2022
+			
+		
+			hxxps://osteopathe-claudia-grimand[.]fr/wp-content/themes/twentynineteen/blog.php?id=1
+			
+			
+			WikiLoader Request
+			
+			
+			December 2022
+			
+		
+			hxxps://www[.]yourbed[.]it/wp-content/themes/twentytwentyone/blog.php?id=1
+			
+			
+			WikiLoader Request
+			
+			
+			December 2022
+			
+		
+			2c44c1312a4c99e689979863e7c82c474395d6f46485bd19d0ee26fc3fa52279
+			
+			
+			Excel SHA256
+			
+			
+			December 2022
+			
+		
+			27070a66fc07ff721a16c4945d4ec1ca1a1f870d64e52ed387b499160a03d490
+			
+			
+			Excel SHA256
+			
+			
+			December 2022
+			
+		
+			a599666949f022de7ccc7edb3d31360e38546be22ad2227d4390364b42f43cfd
+			
+			
+			Excel SHA256
+			
+			
+			December 2022
+			
+		
+			bbe1eb4a211c3ebaf885b7584fc0936b9289b4d4f4a7fc7556cc870de1ff0724
+			
+			
+			Excel SHA256
+			
+			
+			December 2022
+			
+		
+			a2ed8e1d23d2032909c8ad264231bc244c113a4b40786a9bc9df3418cc915405
+			
+			
+			Excel SHA256
+			
+			
+			December 2022
+			
+		
+			1106e4b7392f471a740ec96f9e6a603fe28f74b32eef7b456801a833f13727fc
+			
+			
+			Excel SHA256
+			
+			
+			December 2022
+			
+		
+			9386ccb677bde1c51ca3336d02fea66f9489913f2241caa77def71d09464d937
+			
+			
+			Excel SHA256
+			
+			
+			December 2022
+			
+		
+			ee008ff7b30d4fce17c5b07ed2d6a0593dc346f899eff3441d8fb3c190ef0e0e
+			
+			
+			Excel SHA256
+			
+			
+			December 2022
+]]></content:encoded>
+<pubDate>Mon, 31 Jul 2023 05:00:47 -0700</pubDate>
+<pubDate>Mon, 31 Jul 2023 05:00:47 -0700</pubDate>
+</item>
+<item>
+<title>Job Scams Using Bioscience Lures Target Universities</title>
+<link>https://www.proofpoint.com/us/blog/threat-insight/job-scams-using-bioscience-lures-target-universities</link>
+<guid>https://www.proofpoint.com/us/blog/threat-insight/job-scams-using-bioscience-lures-target-universities</guid>
+<content:encoded><![CDATA[
+
+Key Takeaways
+
+Proofpoint identified a series of campaigns using fraudulent job offers to target university students.
+	The lures mostly purported to be related to bioscience and health entities. 
+	The campaigns began as early as March 2023 and continued through June 2023. 
+	The threat actor tried to entice recipients to have a video call about the role, with the ultimate objective of the campaigns to likely to conduct advance fee fraud (AFF). 
+Overview
+
+As layoffs impact thousands of people across many different industries, threat actors continue to exploit the labor market with employment scams to attempt to steal money from job-hunters, based on Proofpoint research and analysis.
+
+Proofpoint observed a campaign in late May 2023 using a series of job-themed email lures to target university students in North America. The email messages purported to be from a variety of organizations, the majority of which were related to biosciences, healthcare, and biotechnology, with some additional unrelated organizations included as well. The activity continued through June 2023.
+
+The messages contained interview requests for remote data entry jobs. Emails typically contained an attached PDF that included alleged information about the organization, the position offered, salary, and equipment specifications. 
+
+The sender would invite the recipient to conduct a video or chat interview on a third-party platform for additional information and to prepare them for the role. While Proofpoint was not able to confirm the requests made in a video interview, researchers assess with high confidence based on previous related activity that the actor likely told the recipient they would need to pay an advance fee for equipment before receiving it, which the threat actor would collect. 
+
+Retrospective analysis identified multiple related and similar campaigns using the same biotech themes leading to advance fee fraud (AFF) activity in Proofpoint threat data and external sources going back to at least March 2023. Similar related activity following the job fraud model goes back a number of years.
+
+Universities tend to be frequent targets of employment scams. Threat actors may target universities for a variety of reasons. Students are likely more open to flexible, remote work opportunities; international students may not recognize telltale signs of fraudulent emails as well as native English speakers; and rising inflation and cost of education is putting the pinch on students’ finances, making the promise of quick cash more attractive. 
+
+Proofpoint has previously published details on employment fraud targeting universities. However, recent activity involving the spoofing of science and technology employers is unique.  
+
+Campaign Details
+
+Messages purported to be from a variety of senders, including:
+
+russ@valentbiosciencescareers[.]com
+
+linda@ensyscecareers[.]com
+
+robin@agcbiocareers[.]com
+
+ 
+
+The subjects all pertained to requests for interviews, for example:
+
+re: interview
+	interview invite
+	invitation to interview (FRND)
+
+
+Figure 1: Recruitment interview lure spoofing a biosciences company targeting university students.
+
+The actor created fake domains that purported to belong to legitimate companies, typically adding “careers” to the domain name. The spoofed organizations were typically in biosciences, healthcare, biotechnology, and related industries. Email addresses typically impersonated real people at the companies the actor was attempting to spoof. (In one instance, a LinkedIn user who had been impersonated updated her profile on LinkedIn to warn potential recipients of the scam.) 
+
+The messages contained a PDF attachment that purported to contain details of the company and the proposed role. Proofpoint identified multiple PDF samples spoofing various companies. The spoofed PDFs contained the same text content overall, with some details changed including the brand logo, company name, website, and location. These variables were always in bolded text, suggesting the actor used automation to mass create PDFs with different company names to “personalize” the documents.
+
+
+
+Figure 2: PDF lure examples spoofing science companies that include the same descriptions with different branding, locations, and websites.
+
+Each PDF contained a page listing hardware and software requirements. The total sum of the requirements listed was up to $7,000.
+
+
+
+Figure 3: Example hardware and software list provided by the threat actor on a fake job offer. 
+
+The actor encourages the recipient to schedule a virtual interview to discuss the position further. While Proofpoint cannot confirm subsequent activity, it is likely they either:
+
+Ask the individual to pay for the computer and other supplies upfront and tells them they will be reimbursed on their first paycheck 
+	Provide a fake check that the recipient is supposed to use to buy a computer and products from their "supplier" which then bounces
+These are typical behaviors for threat actors perpetrating employment fraud. In some cases, the actor may also ask for cryptocurrency payments to cover the “shipping expenses” of items they are supposed to purchase.
+
+While most of the observed threats associated with this cluster were bioscience, biotechnology, and health themed, Proofpoint has also observed other themes that follow similar tactics, techniques, and procedures. 
+
+Conclusion
+
+Based on the observed payloads, victimology, and campaign and message volume, Proofpoint assesses with high confidence that this is a financially motivated cybercriminal activity cluster. This activity is typically preying on university students, especially those who are currently job hunting. 
+
+All users should be aware of this type of threat, especially those currently in the job market and engaging with recruiters and human resources representatives. Legitimate employers will never send paychecks before an employee’s first day of work, nor will they ask employees to send money to purchase items prior to work beginning. Key components of fraudulent job offers may include: 
+
+An unexpected job offer received from a freemail account such as Gmail or Hotmail spoofing a legitimate organization 
+	A job offer from an email address that uses a domain different from the official company website
+	Nonexistent or overly simplistic interview questions with little to no information about the job duties 
+	PDFs or other documentation that includes grammar and spelling mistakes, and includes generic content about the organization and role
+	Receiving a “paycheck” almost immediately after beginning a discussion with a sender 
+	A sender encouraging a recipient to switch to a personal email or chat account to discuss the job opportunity 
+	Language such as requesting a “quick task” be completed, especially if it involves sending money via mobile applications or Bitcoin addresses
+Recent Indicators of Compromise
+
+Indicator
+			Description
+		agcbiocareers[.]com
+			
+			Spoofed domain used for employment fraud
+			
+		
+			amicusrxcareers[.]com 
+			
+			Spoofed domain used for employment fraud
+		
+			xeneticbiocareers[.]com
+			
+			Spoofed domain used for employment fraud
+		
+			aleralabscareers[.]com
+			
+			Spoofed domain used for employment fraud
+		
+			ensyscecareers[.]com 
+			
+			Spoofed domain used for employment fraud
+		
+			amberstonebiocareers[.]com  
+			
+			Spoofed domain used for employment fraud
+		
+			cernerenvizacareers[.]com
+			
+			Spoofed domain used for employment fraud
+		
+			patientpointcareers[.]com  
+			
+			Spoofed domain used for employment fraud
+		
+			geisingercareer[.]org
+			
+			Spoofed domain used for employment fraud
+		
+			lindybiocareers[.]com
+			
+			Spoofed domain used for employment fraud
+		
+			tbcrtampacareers[.]com
+			
+			Spoofed domain used for employment fraud
+		
+			twinstrandbiocareers[.]com
+			
+			Spoofed domain used for employment fraud
+		
+			catalystcrcareers[.]com
+			
+			Spoofed domain used for employment fraud
+		
+			alamarbiocareers[.]com
+			
+			Spoofed domain used for employment fraud
+		
+			ensyscecareers[.]com
+			
+			Spoofed domain used for employment fraud
+		
+			ventyxbiocareers[.]com
+			
+			Spoofed domain used for employment fraud
+		
+			valentbiosciencescareers[.]com
+			
+			Spoofed domain used for employment fraud
+		
+			cnshealthcaree[.]org
+			
+			Spoofed domain used for employment fraud
+		
+			miradrycareers[.]com 
+			
+			Spoofed domain used for employment fraud
+		
+			cocrystalpharmacareers[.]com
+			
+			Spoofed domain used for employment fraud
+		
+			taelifesciencescareers[.]com
+			
+			Spoofed domain used for employment fraud
+		
+			akadeumcareers[.]com
+			
+			Spoofed domain used for employment fraud
+		
+			arborbioscicareers[.]com
+			
+			Spoofed domain used for employment fraud
+		
+			endrainccareers[.]com
+			
+			Spoofed domain used for employment fraud
+		
+			ethos-labscareers[.]com
+			
+			Spoofed domain used for employment fraud
+		
+			irvineclinicalcareers[.]com
+			
+			Spoofed domain used for employment fraud
+		
+			juneaubiosciencescareers[.]com
+			
+			Spoofed domain used for employment fraud
+		
+			nuviewlifesciencescareers[.]com 
+			
+			Spoofed domain used for employment fraud
+		
+			quansysbiocareers[.]com
+			
+			Spoofed domain used for employment fraud
+		
+			vialcareers[.]com
+			
+			Spoofed domain used for employment fraud
+]]></content:encoded>
+<pubDate>Wed, 19 Jul 2023 05:00:00 -0700</pubDate>
+<pubDate>Wed, 19 Jul 2023 05:00:00 -0700</pubDate>
+</item>
+<item>
+<title>Welcome to New York: Exploring TA453's Foray into LNKs and Mac Malware</title>
+<link>https://www.proofpoint.com/us/blog/threat-insight/welcome-new-york-exploring-ta453s-foray-lnks-and-mac-malware</link>
+<guid>https://www.proofpoint.com/us/blog/threat-insight/welcome-new-york-exploring-ta453s-foray-lnks-and-mac-malware</guid>
+<content:encoded><![CDATA[
+
+*/
+
+/*-->*/
+
+/*-->*/
+Key Takeaways
+
+TA453 continues to adapt its malware arsenal, deploying novel file types and targeting new operating systems, specifically sending Mac malware to one of its recent targets. 
+	TA453 in May 2023 began deploying LNK infection chains instead of Microsoft Word documents with macros. 
+	Regardless of infection chain, TA453 continues to work toward its same end goals of intrusive and unauthorized reconnaissance. 
+	Proofpoint worked with key partners across the defensive community to disrupt TA453 efforts.  
+Overview
+
+In mid-May 2023, TA453—also known publicly as Charming Kitten, APT42, Mint Sandstorm, Yellow Garuda—sent a benign conversation lure masquerading as a senior fellow with the Royal United Services Institute (RUSI) to the public media contact for a nuclear security expert at a US-based think tank focused on foreign affairs. The email solicited feedback on a project called “Iran in the Global Security Context” and requested permission to send a draft for review. The initial email also mentioned participation from other well-known nuclear security experts TA453 has previously masqueraded as, in addition to offering an honorarium. TA453 eventually used a variety of cloud hosting providers to deliver a novel infection chain that deploys the newly identified PowerShell backdoor GorjolEcho. When given the opportunity, TA453 ported its malware and attempted to launch an Apple flavored infection chain dubbed NokNok by Proofpoint. TA453 also employed multi-persona impersonation in its unending espionage quest. 
+
+Continuing With Benign Message Approach
+
+TA453 continues to iterate and use benign messages to target experts in Middle Eastern affairs and nuclear security. As Joint Comprehensive Plan of Action (JCPOA) negotiations continue and Tehran finds itself increasingly isolated within its sphere of influence, TA453 is focusing a large majority of its targeting efforts against the experts likely informing these foreign policies.  As seen in one of TA453’s most recent campaigns (Figures 1 and 2), the threat actor initiated contact with its target using a benign email and later used multi-persona impersonation, listing additional experts to establish rapport with the target.    
+
+
+
+Figure 1. Initial TA453 approach using a benign email.
+
+
+
+Figure 2. TA453 multi-persona impersonation approach in a follow-on email.
+
+At this time, Proofpoint judges that all of these accounts are actor-created to spoof well-known experts and are not compromised accounts. 
+
+Infection by a Thousand Clouds
+
+After just one benign email interaction with the intended target, TA453 delivered a malicious link to a Google Script macro that would redirect the target to a Dropbox URL. The URL hosted a password encrypted .rar file, “Abraham Accords & MENA.rar” (SHA256: ddead6e794b72af26d23065c463838c385a8fdff9fb1b8940cd2c23c3569e43b), which contained a dropper titled “Abraham Accords & MENA.pdf.lnk” (SHA256:464c5cd7dd4f32a0893b9fff412b52165855a94d193c08b114858430c26a9f1d). Using a .rar and LNK file to deploy malware differs from TA453’s typical infection chain of using VBA macros or remote template injection. The LNK enclosed in the RAR used PowerShell to download additional stages from a cloud hosting provider. 
+
+
+
+Figure 3. GorjolEcho full infection chain.
+
+When Dropbox was notified, they rapidly disrupted the accounts associated with this TA453 campaign. 
+
+Additional Malware Staging
+
+Following the dropper using obfuscated PowerShell to call out to the cloud hosting provider, the malware uses the Gorjol function to download base64 encoded content from a .txt file. The downloaded content is decoded and invoked, becoming the function Borjol (Figure 4).
+
+
+
+Figure 4. Borjol function.
+
+Borjol communicates over AES encrypted HTTPS with the attacker-registered subdomain fuschia-rhinestone.cleverapps[.]io via the legitimate Clever Cloud service, which allows users to host JavaScript applications in the cloud. The returned data decrypts into another Borjol function. This new function uses previous variables and results in decrypting the PowerShell backdoor, dubbed GorjolEcho by Proofpoint. GorjolEcho establishes persistence through putting a copy of the initial stages in a StartUp entry. The backdoor is now staged and ready to execute. 
+
+GO, GO, GORJOL: GorjolEcho starts by displaying a decoy PDF that matches the content of the initial phishing approach before encoding, encrypting, and exfiltrating information to the C2. If the C2 responds with any HTTP response besides 400 or 200, an error message in Korean of “wau, ije ulineun mueos-eul halkkayo?" is provided. The message roughly translates to “wow, now what are we doing?".
+
+If a valid response is received, GorjolEcho can start and stop commands from the threat actor. While Proofpoint researchers did not observe the commands, it is likely that some of them would have downloaded the espionage-focused modules dubbed POWERSTAR by Volexity. 
+
+
+
+Figure 5. GorjolEcho.
+
+But I Only Have an Apple…
+
+Following TA453’s attempted delivery of GorjolEcho, TA453 realized the delivered file would not run on the target’s Apple computer. About a week later, the TA453 persona reached out again via email with a new infection chain ported to work on Mac operating systems.  
+
+
+
+Figure 6. TA453 email with a Mac infection chain. 
+
+The message contained a password-protected ZIP file containing the first stage Mac malware along with a series of instructions. 
+
+Mach-O: Within the ZIP archive file was a bespoke Mac application masquerading as a RUSI VPN solution and share drive GUI. Upon initialization, it executes an Apple script file, which uses curl to download a file from library-store[.]camdvr[.]org/DMPR/[alphanumeric string]. At the time of analysis, library-store.camdvr[.]org was resolving to 144.217.129[.]176, an OVH IP. This second stage is a bash script dubbed NokNok that establishes a backdoor on the system. It generates a system identifier by combining the operating system name, hostname, and a random number. That system identifier is then encrypted with the NokNok function and base64 encoded before being used as the payload of an HTTP POST to library-store.camdvr[.]org. The script first establishes persistence by looping indefinitely and posts every two seconds. It expects responses containing either "KillKill" or "ModuleName." If it receives the former, it terminates the script. If it receives the latter, it executes the content of the response as a command.  
+
+Proofpoint judges NokNok is almost certainly a port or evolution of the aforementioned GorjolEcho and is intended to serve as an initial foothold for TA453 intrusions.
+
+
+
+Figure 7. NokNok delivery.
+
+NokNok Modules: During our analysis, Proofpoint identified four very similar, but unique modules called the following by TA453: 
+
+Processes
+	Informations
+	Applications
+	Persistence
+
+
+Figure 8. NokNok module analysis.
+
+These NokNok modules are bash scripts, all of which share an encryption and base64 chunking routine for exfiltration. The modules define SendDataByHttp function, which collects username and system name before encrypting the information with NokNok encryption, base64 encoding it, and chunking it for transportation. Logs are also sent to the TA453-controlled C2 server. Two of the modules (Processes and Persistence) were delivered twice during our analysis. 
+
+The Processes module uses ps-aux to gather a list of all currently running processes. 
+
+
+
+Figure 9. NokNok Processes module.
+
+The Informations module uses the system_profiler tool on macOS to retrieve information about the system's software, specifically the SPSoftwareDataType which includes details such as the operating system version, system uptime, and installed software. The module also uses ifconfig to gather network information. All of this information is encoded in base64 and then saved to result.txt for exfiltration. 
+
+
+
+Figure 10. NokNok Informations module.
+
+The Applications module conducts similar reconnaissance, using echo to list installed Applications which are then base64 encoded for exfiltration. 
+
+Finally, the Persistence module establishes persistence by first removing LaunchAgents, then recreating the same directory, writing a hardcoded key to Id.txt, and then using curl to download replacements to Finder and Finder's Property List. While the file was unavailable to Proofpoint at the time of our analysis, it is almost certain that the TA453-controlled server is either delivering another remote access trojan, or an additional stage for further operator exploitation. 
+
+
+
+Figure 11. NokNok Persistence module.
+
+The collection of system information and running processes mirrors previously identified TA453 malware samples such as Korg, the malware deployed by TA453 after engaging in multi-persona impersonation.
+
+It is likely TA453 operates additional espionage focused modules for both GorjolEcho and NokNok, respectively. The identified NokNok modules mirror a majority of the functionality of the modules for GhostEcho (CharmPower) identified by Check Point. This clustering of malware is strengthened by continued code similarities, including specifically the reuse of Stack="Overflow” variable and similar logging syntax. Some of the code overlaps discussed previously are attributed to Charming Kitten by Google’s Threat Analysis group. Additionally, some of the NokNok functionality resembles Charming Kitten Mac malware reported on in early 2017.  
+
+Fake File Sharing Website: The emailed instructions accompanying the malicious attachment included a link and credentials to a fake file sharing service spoofing a RUSI Wing FTP server, hosted on the dynamic DNS hostname filemanager.theworkpc[.]com.
+ 
+
+
+
+Figure 12. Lure website filemanager.theworkpc[.]com.
+
+The site appears to reject the provided username and password and is likely just there to establish legitimacy for the attached malware. There is the possibility that the website could be tracking and fingerprinting visitors, but no abnormal code was identified in Proofpoint’s review. When questioned by the target, TA453 claimed the provided password was correct and the target simply needed to run the application to appropriately access the files. 
+
+
+
+Figure 13. Error message from TA453 lure website.
+
+Attribution
+
+Despite the identified infection chains differing from past TA453 intrusions where malware was deployed via VBA macro (GhostEcho, also known as CharmPower) or remote template injection (Korg), Proofpoint attributes this campaign and this malware to TA453 with high confidence. This assessment is based on both direct code similarities and similarities in overall campaign tactics, techniques, and procedures, Proofpoint assesses GorjolEcho and NokNok represent the latest iterations of TA453’s backdoor. This modular backdoor was first detected by Proofpoint in Fall 2021.
+
+Proofpoint continues to assess that TA453 operates in support of the Islamic Revolutionary Guard Corps (IRGC), specifically the IRGC Intelligence Organization (IRGC-IO). This assessment is based on a variety of evidence, including overlaps in unit numbering between Charming Kitten reports and IRGC units as identified by PWC, the US Department of Justice indictment of Monica Witt along with IRGC-affiliated actors, and analysis of TA453 targeting compared to reported IRGC-IO priorities. 
+
+Proofpoint currently views TA453 as overlapping with Microsoft’s Mint Sandstorm (formerly PHOSPHORUS) and roughly equivalent to Mandiant’s APT42 and PWC’s Yellow Garuda, all of which can generally be considered Charming Kitten. 
+
+Outlook
+
+TA453 continues to significantly adapt its infection chains to complicate detection efforts and conduct cyber espionage operations against its targets of interest. The use of Google Scripts, Dropbox, and CleverApps demonstrate that TA453 continues to subscribe to a multi-cloud approach in its efforts to likely minimize disruptions from threat hunters. TA453’s willingness to port malware to Mach-O also demonstrates how much effort the threat actor is willing to put into pursuing its targets. Regardless of the infection method, TA453 continues to deploy modular backdoors in an effort to collect intelligence from highly targeted individuals. 
+
+As TA453 continues to use legitimate cloud hosted services, Proofpoint recommends threat hunting for applicable Emerging Threats INFO network signatures in network traffic.
+
+Indicators of Compromise (IOCs)
+
+
+			Indicator
+			
+			
+			Type
+			
+			
+			Context
+			
+		
+			464c5cd7dd4f32a0893b9fff412b52165855a94d193c08b114858430c26a9f1d
+			
+			
+			SHA256
+			
+			
+			Dropper (Abraham Accords & MENA.pdf.lnk)
+			
+		
+			ddead6e794b72af26d23065c463838c385a8fdff9fb1b8940cd2c23c3569e43b
+			
+			
+			SHA256
+			
+			
+			Archive (Abraham Accords & MENA.rar)
+			
+		
+			1fb7f1bf97b72379494ea140c42d6ddd53f0a78ce22e9192cfba3bae58251da4
+			
+			
+			SHA256
+			
+			
+			NokNok Backdoor
+			
+		
+			e98afa8550f81196e456c0cd4397120469212e190027e33a1131f602892b5f79
+			
+			
+			SHA256
+			
+			
+			Applications NokNok Module
+			
+		
+			5dc7e84813f0dae2e72508d178aed241f8508796e59e33da63bd6b481f507026
+			
+			
+			SHA256
+			
+			
+			Persistence NokNok Module
+			
+		
+			b6916b5980e79a2d20b4c433ad8e5e34fe9683ee61a42b0730effc6f056191eb
+			
+			
+			SHA256
+			
+			
+			Processes NokNok Module
+			
+		
+			acfa8a5306b702d610620a07040262538dd59820d5a42cf01fd9094ce5c3487c
+			
+			
+			SHA256
+			
+			
+			Informations NokNok Module[ADJ1] [CG2]
+			
+		
+			library-store[.]camdvr[.]org
+			
+			
+			Host
+			
+			
+			NokNok C2
+			
+		
+			144.217.129[.]176
+			
+			
+			IP
+			
+			
+			NokNok C2
+			
+		
+			filemanager.theworkpc[.]com
+			
+			
+			Host
+			
+			
+			Spoofed FTP Server website
+			
+		
+			fuschia-rhinestone.cleverapps[.]io
+			
+			
+			Host
+			
+			
+			GorjolEcho C2
+			
+		 
+
+ET Signatures
+
+
+			SID
+			
+			
+			Rule Name
+			
+		
+			2046007
+			
+			
+			ET INFO DYNAMIC_DNS Query to a *.theworkpc .com Domain
+			
+		
+			2046008
+			
+			
+			ET INFO DYNAMIC_DNS HTTP Request to a *.theworkpc .com Domain
+			
+		
+			2045981
+			
+			
+			ET INFO DYNAMIC_DNS Query to a *.camdvr .org Domain
+			
+		
+			2045982
+			
+			
+			ET INFO DYNAMIC_DNS HTTP Request to a *.camdvr .org Domain
+			
+		
+			2045737
+			
+			
+			ET INFO Platform-As-A-Service Domain in DNS Lookup (cleverapps .io)
+			
+		 
+
+Proofpoint appreciates the analytic assistance from Dropbox and HSBC Cyber Intelligence and Threat Analysis during this investigation.
+]]></content:encoded>
+<pubDate>Thu, 06 Jul 2023 05:00:00 -0700</pubDate>
+<pubDate>Thu, 06 Jul 2023 05:00:00 -0700</pubDate>
+</item>
+<item>
+<title>Cybercrime Targeting Italy</title>
+<link>https://www.proofpoint.com/us/blog/threat-insight/cybercrime-targeting-italy</link>
+<guid>https://www.proofpoint.com/us/blog/threat-insight/cybercrime-targeting-italy</guid>
+<content:encoded><![CDATA[
+
+Download full report (PDF)
+
+Global Threat Landscape 
+
+Proofpoint has observed multiple major changes impacting the global threat landscape. This includes the shift away from macro-enabled documents, the increased use and availability of credential phishing kits that bypass multi-factor authentication (MFA), and efforts to build trust with targets by initiating benign conversations before sending content with a payload.
+
+From mid-2022 into 2023, the threat landscape experienced one of the largest shifts in threat behaviors across threat actor designations due to Microsoft beginning to block macro-enabled attachments by default in its Office products. This change forced threat actors to adopt new mechanisms of malware delivery, including regularly modifying tactics, techniques, and procedures (TTPs) in campaigns as an attempt to evade detections, and using infrequently observed filetypes. 
+
+MFA is becoming a standard security practice and phish kits have evolved to steal these tokens and bypass MFA. Threat actors are using phish kits that leverage transparent reverse proxy, which enables them to conduct “attacker-in-the-middle” during a browser session and steal credentials and session cookies in real-time. Based on Proofpoint visibility, such kits are becoming more widely available.
+
+Proofpoint has also observed an increase in telephone-oriented attack delivery (TOAD) threats, which use social engineering to prompt a recipient to phone a fake customer service representative, which leads to the installation of malware. Proofpoint currently observes hundreds of thousands of these threats per day.  
+
+Cybercrime Targeting Italy 
+
+Proofpoint researchers have observed multiple threat actors targeting Italian organizations for financial gain. Such actors leverage social engineering techniques including spoofing Italian government entities or purporting to be replies to existing conversations to trick users into trusting and engaging with the content. 
+
+Threat actors demonstrate many objectives for exploitation, including stealing data and taking over accounts, obtaining banking details to steal funds, or install follow-on malware including potentially ransomware. Such threats can have major financial impacts, with losses totaling millions of dollars.  
+
+Key findings from the attached PDF include: 
+
+Actors across the threat landscape, including those targeting Italian users, are adopting new delivery methods and moving away from macro-enabled documents.
+	Threat actors specifically targeting Italy in campaigns include TA550, TA551, TA544, TA554 and TA542
+	Ursnif banking malware is the most frequently observed malware targeting Italian organizations.
+	Proofpoint has observed actors spoof Italian government organizations related to financial, postal, and health services.
+	Identified threats can enable data theft, reconnaissance, financial loss, and delivery of follow-on malware, including ransomware
+To read more about threat actors targeting Italy, please download the full report here.
+]]></content:encoded>
+<pubDate>Wed, 21 Jun 2023 05:00:21 -0700</pubDate>
+<pubDate>Wed, 21 Jun 2023 05:00:21 -0700</pubDate>
+</item>
+<item>
+<title>The 2023 Human Factor Report Analyzes Threats in the Cyber Attack Chain</title>
+<link>https://www.proofpoint.com/us/blog/threat-insight/2023-human-factor-analyzes-evolving-threats-attack-chain</link>
+<guid>https://www.proofpoint.com/us/blog/threat-insight/2023-human-factor-analyzes-evolving-threats-attack-chain</guid>
+<content:encoded><![CDATA[
+
+In the latest edition of our Human Factor report, launching today, we take our closest ever look at developments in the cyber attack chain. After two years of pandemic-induced disruption, many parts of the world have returned to something close to business as usual. And for cyber criminals, that means getting back to innovating, iterating and broadening their range of attacks.
+
+Drawing on one of the largest data sets in cybersecurity and insights from our global team of researchers, Human Factor 2023 explores a year of extremes. Highly complex techniques became commoditized, but some of the biggest individual losses arose from nothing more than a friendly, persuasive conversation. As usual, we view all of this through a people-centric lens, looking at the social engineering tactics attackers used to undermine defenses.
+
+Here are a few key themes from this year’s report.
+
+Microsoft mixes things up
+
+After almost three decades as a popular malware distribution method, Office macros began to decline in use after Microsoft updated how its software handles files downloaded from the web. The changes have set off an ongoing flurry of experimentation by attackers to find alternatives.
+
+Emotet is back on top
+
+Law enforcement action took the prolific Emotet botnet offline for most of 2021. But last year the habitual volume leader roared back to top the charts once more, sending over 25 million messages. Despite this, Emotet's presence has been intermittent, with the group also showing signs of lethargy in adapting to the post-macro threat landscape. Whether they can keep their crown through 2023 remains to be seen.
+
+SocGholish hits the big time
+
+With a novel distribution method involving drive-by downloads and fake browser updates, SocGholish pushed into the top-five malware by message volume. Last year the group was able to infect some high-profile websites, meaning that large amounts of legitimate email linking to those sites put users at risk. 
+
+Attackers get chatty
+
+Conversational threats, which start with attackers sending seemingly harmless messages, surged last year. In some mobile verticals it was the year’s fastest-growing threat, seeing a twelvefold increase in volume. And speaking of conversations, telephone-oriented attack delivery (or TOAD for short) peaked at 13 million messages per month.
+
+Multifactor Maladies
+
+New phishing tools have emerged that allow attackers to bypass the multifactor authentication many organizations use to keep credentials secure. These techniques already account for hundreds of thousands of malicious messages each month.
+
+Active Directory Anxiety
+
+Even a single compromised account can leave organizations exposed to domain-wide ransomware and data theft. As many as 10% of endpoints have an unprotected privileged account password with 26% of those having domain admin privileges.
+
+Get the full story
+
+Every day, Proofpoint analyzes billions of email messages, URLs and attachments for our global customer base. The Human Factor report draws on analysis of that data by our team of expert threat researchers. 
+
+To read more of their insights, download the full report.
+]]></content:encoded>
+<pubDate>Wed, 14 Jun 2023 05:00:00 -0700</pubDate>
+<pubDate>Wed, 14 Jun 2023 05:00:00 -0700</pubDate>
+</item>
+
+</channel>
+</rss>

@@ -1,0 +1,7 @@
+------------------------------------------------------
+Started: 2023-11-14 02:59:21.526022
+Existing_entries: 0
+Fetching from http://isc.sans.org/rssfeed.xml
+Feed error: 301
+append_entries: 0
+error when rendering xml, skip docs/SANS_Internet_Storm_Center

@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom">
+<channel>
+<title>Blog RSS Feed</title>
+<link>https://www.tripwire.com/</link>
+
+<item>
+<title>Cloud Watching Report: Key Takeaways</title>
+<link>https://www.tripwire.com/state-of-security/cloud-watching-report-key-takeaways</link>
+<guid>https://www.tripwire.com/state-of-security/cloud-watching-report-key-takeaways</guid>
+<content:encoded><![CDATA[
+<div> Gartner, public cloud services, 700 billion USD, 2024, cloud security<br>
+<br>
+Summary:
+The capabilities of cloud computing have significantly changed the digital landscape, with the market for public cloud services expected to exceed 700 billion USD by 2024 according to Gartner. This growth brings new opportunities for IT teams but also raises security challenges. Fortra's report, "Cloud Watching: Implementing Strategic Cloud Security," aims to address these challenges and provide important practices for establishing and maintaining cloud security. As the popularity of cloud solutions continues to increase, it is crucial for organizations to understand and implement strategic cloud security measures. <div>
+The capabilities of cloud computing have changed the digital landscape significantly, and the popularity of cloud solutions only continues to increase. According to Gartner , the market for public cloud services is expected to surpass 700 billion USD by the end of 2024. The growth of cloud technologies presents a wealth of new opportunities for IT teams but also brings a host of security challenges. Fortra published a report, “Cloud Watching: Implementing Strategic Cloud Security,” in an effort to break down some of the challenges to cloud security and important practices for establishing and...
+]]></content:encoded>
+<pubDate>Mon, 13 Nov 2023 03:05:23 -0600</pubDate>
+<pubDate>Mon, 13 Nov 2023 03:05:23 -0600</pubDate>
+</item>
+<item>
+<title>A Simplified Overview of the MITRE ATT&amp;CK Framework</title>
+<link>https://www.tripwire.com/state-of-security/simplified-overview-mitre-attck-framework</link>
+<guid>https://www.tripwire.com/state-of-security/simplified-overview-mitre-attck-framework</guid>
+<content:encoded><![CDATA[
+<div> Keywords: cybersecurity, threat actors, breach, tactics, strategies, MITRE ATT&CK Framework
+
+Summary:
+The MITRE ATT&CK Framework provides insight into the inner workings of threat actors in the world of cybersecurity, detailing their methods, tactics, and strategies. It offers an understanding of how these malicious actors execute successful attacks and remain concealed within systems to persistently operate. The framework allows for the comprehension of the seemingly perplexing procedures utilized by threat actors. With a focus on breaching systems, the framework sheds light on the strategies employed by threat actors and their seamless convergence to achieve their goals. By utilizing the MITRE ATT&CK Framework, cybersecurity professionals gain valuable knowledge on threat actor behavior, ultimately enhancing their ability to prevent and respond to cyber threats effectively.<br><br>Summary: The MITRE ATT&CK Framework provides insights into the inner workings of threat actors in the world of cybersecurity, detailing their methods, tactics, and strategies. It offers an understanding of how these malicious actors execute successful attacks and remain concealed within systems to persistently operate. The framework allows for the comprehension of the seemingly perplexing procedures utilized by threat actors. With a focus on breaching systems, the framework sheds light on the strategies employed by threat actors and their seamless convergence to achieve their goals. By utilizing the MITRE ATT&CK Framework, cybersecurity professionals gain valuable knowledge on threat actor behavior, ultimately enhancing their ability to prevent and respond to cyber threats effectively. <div>
+In the world of cybersecurity, have you ever wondered about the inner workings of threat actors as they attempt to breach systems, their methods, tactics, and strategies, and how they seamlessly converge to execute a successful attack? It's not merely about initiating an attack but also the strategies they utilize to remain concealed within the system, allowing them to persistently operate and ultimately achieve their goals. These seemingly perplexing procedures of malicious actors become more accessible to understand with the MITRE ATT&amp;CK Framework . The MITRE ATT&amp;CK Framework MITRE ATT&amp;CK...
+]]></content:encoded>
+<pubDate>Mon, 13 Nov 2023 03:04:29 -0600</pubDate>
+<pubDate>Mon, 13 Nov 2023 03:04:29 -0600</pubDate>
+</item>
+<item>
+<title>CherryBlos, the malware that steals cryptocurrency via your photos - what you need to know</title>
+<link>https://www.tripwire.com/state-of-security/cherryblos-malware-steals-cryptocurrency-your-photos-what-you-need-know</link>
+<guid>https://www.tripwire.com/state-of-security/cherryblos-malware-steals-cryptocurrency-your-photos-what-you-need-know</guid>
+<content:encoded><![CDATA[
+<div> CherryBlos, Android malware, cryptocurrency accounts, photos, sensitive information <br>
+Summary: 
+CherryBlos is a family of Android malware that can steal cryptocurrency by accessing sensitive information stored in the user's photo gallery. The malware is designed to extract details related to cryptocurrency wallets from photos stored on the Android device. The concept is that if a user inadvertently stores images containing sensitive information, such as cryptocurrency wallet details, the malware can access and use that information to steal cryptocurrency from the victim's accounts. This highlights the importance of keeping sensitive information secure and not storing it in easily accessible locations on mobile devices. This also serves as a cautionary reminder to be vigilant about the security of personal devices and the potential risks of malware and cyber attacks targeting cryptocurrency users. <div>
+What's the deal with CherryBlos? CherryBlos is a rather interesting family of Android malware that can plunder your cryptocurrency accounts - with a little help from your photos. Wait. I've heard of hackers stealing photos before, but what do you mean by malware stealing cryptocurrency via my photos? How does it do that? Well, imagine you have sensitive information - such as details related to your cryptocurrency wallet - in your Android phone's photo gallery. Hang on. Why would I have photos related to my cryptocurrency wallet stored on my smartphone? Good question! It doesn't sound entirely...
+]]></content:encoded>
+<pubDate>Fri, 10 Nov 2023 03:58:49 -0600</pubDate>
+<pubDate>Fri, 10 Nov 2023 03:58:49 -0600</pubDate>
+</item>
+<item>
+<title>Some Financial Institutions Must Report Breaches in 30 Days</title>
+<link>https://www.tripwire.com/state-of-security/some-financial-institutions-must-report-breaches-30-days</link>
+<guid>https://www.tripwire.com/state-of-security/some-financial-institutions-must-report-breaches-30-days</guid>
+<content:encoded><![CDATA[
+
+The heat has just been turned up for companies hoping to “hide out” a data breach. Announced October 27th, all non-banking financial institutions are now required to report data breach incidents within 30 days. The amendment to the Safeguards Rule was made by the U.S. Federal Trade Commission (FTC). It will go into effect 180 days after publication of the law in the Federal Register, or around April of next year. What is the Safeguards Rule? Designed to ensure that covered entities implement processes to keep customer information secure, the Standards for Safeguarding Customer Information , or...
+]]></content:encoded>
+<pubDate>Wed, 08 Nov 2023 04:27:29 -0600</pubDate>
+<pubDate>Wed, 08 Nov 2023 04:27:29 -0600</pubDate>
+</item>
+<item>
+<title>Key Highlights from the 2023 UK Cyber Crime Landscape</title>
+<link>https://www.tripwire.com/state-of-security/key-highlights-uk-cyber-crime-landscape</link>
+<guid>https://www.tripwire.com/state-of-security/key-highlights-uk-cyber-crime-landscape</guid>
+<content:encoded><![CDATA[
+
+It’s 2023, and the landscape of cybercrime in the United Kingdom is evolving unprecedentedly. This year's cyber threat landscape is shaped by many factors, from the continuing effects of the global pandemic to the ever-expanding digital footprint of individuals and organizations. In this article, we delve into the key cybercrime statistics for 2023, providing you with valuable insights into the state of cybersecurity in the UK . The surge in cyberattacks has been relentless, with ransomware, data breaches, and phishing incidents making headlines and causing substantial disruptions. This...
+]]></content:encoded>
+<pubDate>Wed, 08 Nov 2023 04:27:26 -0600</pubDate>
+<pubDate>Wed, 08 Nov 2023 04:27:26 -0600</pubDate>
+</item>
+<item>
+<title>Google introduces real-time scanning on Android devices to fight malicious apps</title>
+<link>https://www.tripwire.com/state-of-security/google-hopes-better-fight-malicious-apps-real-time-scanning-android-devices</link>
+<guid>https://www.tripwire.com/state-of-security/google-hopes-better-fight-malicious-apps-real-time-scanning-android-devices</guid>
+<content:encoded><![CDATA[
+
+It doesn't matter if you have a smartphone, a tablet, a laptop, or a desktop computer. Whatever your computing device of choice, you don't want it impacted by malware. And although many of us are familiar with the concept of protecting our PCs and laptops with security software that aims to identify attacks in real-time, it's not a defence that is as widely adopted on mobile devices. However, the sheer amount of malware in existence - on the Android platform particularly - means that we should take mobile security threats just as seriously as we do on traditional PCs. After all, the last thing...
+]]></content:encoded>
+<pubDate>Tue, 07 Nov 2023 03:41:41 -0600</pubDate>
+<pubDate>Tue, 07 Nov 2023 03:41:41 -0600</pubDate>
+</item>
+<item>
+<title>Looking Ahead: Highlights from ENISA's Foresight 2030 Report</title>
+<link>https://www.tripwire.com/state-of-security/looking-ahead-highlights-enisas-foresight-2030-report</link>
+<guid>https://www.tripwire.com/state-of-security/looking-ahead-highlights-enisas-foresight-2030-report</guid>
+<content:encoded><![CDATA[
+
+One of the most important factors in the technology and cybersecurity industries is the inevitable presence of constant change. Technology, business, and industry are always evolving, while cybercriminals are always searching for new and innovative ways to attack. While there is no surefire way to account for future developments, some professionals have dedicated time and expertise to predicting the ways in which the current threat landscape and state of technology may lead to issues down the line. The European Union Agency for Cybersecurity (known as ENISA) recently released a report breaking...
+]]></content:encoded>
+<pubDate>Tue, 07 Nov 2023 03:41:36 -0600</pubDate>
+<pubDate>Tue, 07 Nov 2023 03:41:36 -0600</pubDate>
+</item>
+<item>
+<title>What We Learned From "The Cyber-Resilient CEO" Report</title>
+<link>https://www.tripwire.com/state-of-security/what-we-learned-cyber-resilient-ceo-report</link>
+<guid>https://www.tripwire.com/state-of-security/what-we-learned-cyber-resilient-ceo-report</guid>
+<content:encoded><![CDATA[
+
+In today's digital landscape, cybersecurity is not just a technical concern; it's a strategic imperative. As we delve into the insights from a recent report from Accenture titled " The Cyber-Resilient CEO ," we'll uncover CEOs' critical role in safeguarding their organizations against cyber threats. Discover how a select group of leaders navigates the complex terrain of cyber vulnerabilities, making cybersecurity a cornerstone of business resilience. The Cyber-Threat Complexities CEOs recognize that the business world is rife with cyber vulnerabilities. This report reveals that disruptive...
+]]></content:encoded>
+<pubDate>Mon, 06 Nov 2023 03:00:54 -0600</pubDate>
+<pubDate>Mon, 06 Nov 2023 03:00:54 -0600</pubDate>
+</item>
+<item>
+<title>What is Classiscam Scam-as-a-Service?</title>
+<link>https://www.tripwire.com/state-of-security/what-classiscam-scam-service</link>
+<guid>https://www.tripwire.com/state-of-security/what-classiscam-scam-service</guid>
+<content:encoded><![CDATA[
+
+"The 'Classiscam' scam-as-a-service operation has broadened its reach worldwide, targeting many more brands, countries, and industries, causing more significant financial damage than before,” touts Bleeping Computer . So just what is it? What is Classiscam? It’s a bird. It’s a plane. It’s - a pyramid? Classiscam is an enterprising criminal operation that uses a division of labor to organize low-level phishers into classified site scammers and takes a cut off the top. Once solo purveyors of dark web phishing kits , these entryway hackers have now found a flag to fly under, and it pays. Just...
+]]></content:encoded>
+<pubDate>Mon, 06 Nov 2023 03:00:54 -0600</pubDate>
+<pubDate>Mon, 06 Nov 2023 03:00:54 -0600</pubDate>
+</item>
+<item>
+<title>Tripwire Patch Priority Index for October 2023</title>
+<link>https://www.tripwire.com/state-of-security/tripwire-patch-priority-index-october-2023</link>
+<guid>https://www.tripwire.com/state-of-security/tripwire-patch-priority-index-october-2023</guid>
+<content:encoded><![CDATA[
+
+Tripwire's October 2023 Patch Priority Index (PPI) brings together important vulnerabilities for Microsoft. First on the patch priority is a patch for Microsoft Edge (Chromium-based) that resolves a type confusion vulnerability. Next on the patch priority list this month are patches for Microsoft Office that resolve 3 elevation of privilege vulnerabilities. Next are patches that affect components of the core Windows operating system. These patches resolve over 60 vulnerabilities, including elevation of privilege, information disclosure, security feature bypass, remote code execution, and...
+]]></content:encoded>
+<pubDate>Fri, 03 Nov 2023 04:06:39 -0500</pubDate>
+<pubDate>Fri, 03 Nov 2023 04:06:39 -0500</pubDate>
+</item>
+
+</channel>
+</rss>

@@ -1,0 +1,7 @@
+------------------------------------------------------
+Started: 2023-11-14 02:59:20.801586
+Existing_entries: 0
+Fetching from http://www.microsoft.com/technet/security/bulletin/secrss.aspx
+Feed error: 301
+append_entries: 0
+error when rendering xml, skip docs/Microsoft_Security_Bulletins
