@@ -55,7 +55,7 @@ I will consider hosting more feeds in the future. Email me or submit an issue if
 - http://feeds.arstechnica.com/arstechnica/index/ -> https://DCKento.github.io/RSS-GPT/Ars_Technica.xml
 - http://www.us-cert.gov/channels/alerts.rdf -> https://DCKento.github.io/RSS-GPT/US_CERT_Cyber_Security_Alerts.xml
 - http://feeds.feedburner.com/tripwire-state-of-security -> https://DCKento.github.io/RSS-GPT/The_State_of_Security.xml
-- https://malware.news/c/news/8.rss -> https://DCKento.github.io/RSS-GPT/Malware News.xml
+- https://malware.news/c/news/8.rss -> https://DCKento.github.io/RSS-GPT/Malware_News.xml
 - http://thehackernews.com/feeds/posts/default -> https://DCKento.github.io/RSS-GPT/The_Hacker_News.xml
 - https://www.ncsc.gov.uk/blogs-feed.xml -> https://DCKento.github.io/RSS-GPT/NCSC_Blog_Feed.xml
 - http://securelist.com/feed/ -> https://DCKento.github.io/RSS-GPT/Securelist.xml
