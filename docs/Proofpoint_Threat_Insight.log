@@ -20,3 +20,9 @@ Append: [Cybercrime Targeting Italy](https://www.proofpoint.com/us/blog/threat-i
 Append: [The 2023 Human Factor Report Analyzes Threats in the Cyber Attack Chain](https://www.proofpoint.com/us/blog/threat-insight/2023-human-factor-analyzes-evolving-threats-attack-chain)
 append_entries: 10
 Finish: 2023-11-14 02:48:26.893529
+------------------------------------------------------
+Started: 2023-11-14 04:14:21.952894
+Existing_entries: 10
+Fetching from https://www.proofpoint.com/us/threat-insight-blog.xml
+append_entries: 0
+Finish: 2023-11-14 04:14:22.128261

@@ -52,7 +52,7 @@ I will consider hosting more feeds in the future. Email me or submit an issue if
 
 - http://rss.packetstormsecurity.com/ -> https://DCKento.github.io/RSS-GPT/Packet_Storm.xml
 - https://www.proofpoint.com/us/threat-insight-blog.xml -> https://DCKento.github.io/RSS-GPT/Proofpoint_Threat_Insight.xml
-- http://feeds.arstechnica.com/arstechnica/index/ -> https://DCKento.github.io/RSS-GPT/Ars_Technica.xml
+- https://www.securityweek.com/feed/ -> https://DCKento.github.io/RSS-GPT/Security_Week.xml
 - http://www.us-cert.gov/channels/alerts.rdf -> https://DCKento.github.io/RSS-GPT/US_CERT_Cyber_Security_Alerts.xml
 - http://feeds.feedburner.com/tripwire-state-of-security -> https://DCKento.github.io/RSS-GPT/The_State_of_Security.xml
 - https://malware.news/c/news/8.rss -> https://DCKento.github.io/RSS-GPT/Malware_News.xml
@@ -63,5 +63,5 @@ I will consider hosting more feeds in the future. Email me or submit an issue if
 - https://www.cisecurity.org/feed/alert -> https://DCKento.github.io/RSS-GPT/Cyber_Threat_Alert.xml
 - http://www.microsoft.com/technet/security/bulletin/secrss.aspx -> https://DCKento.github.io/RSS-GPT/Microsoft_Security_Bulletins.xml
 - http://www.reddit.com/r/netsec/.rss -> https://DCKento.github.io/RSS-GPT/Technical_Info_Security_Content_Discussion.xml
-- http://isc.sans.org/rssfeed.xml -> https://DCKento.github.io/RSS-GPT/SANS_Internet_Storm_Center.xml
+- https://isc.sans.edu/rssfeed.xml -> https://DCKento.github.io/RSS-GPT/SANS_Internet_Storm_Center.xml
 - http://blog.portswigger.net/feeds/posts/default -> https://DCKento.github.io/RSS-GPT/PortSwigger_Web_Security_Blog.xml

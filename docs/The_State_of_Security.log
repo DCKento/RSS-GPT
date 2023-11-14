@@ -20,3 +20,9 @@ Append: [What is Classiscam Scam-as-a-Service?](https://www.tripwire.com/state-o
 Append: [Tripwire Patch Priority Index for October 2023](https://www.tripwire.com/state-of-security/tripwire-patch-priority-index-october-2023)
 append_entries: 10
 Finish: 2023-11-14 02:59:00.247716
+------------------------------------------------------
+Started: 2023-11-14 04:14:30.373101
+Existing_entries: 10
+Fetching from http://feeds.feedburner.com/tripwire-state-of-security
+append_entries: 0
+Finish: 2023-11-14 04:14:30.594439

@@ -4,14 +4,15 @@
 <title>Proofpoint Threat Insight</title>
 <link>https://www.proofpoint.com/us/blog</link>
 
+
 <item>
 <title>Security Brief: TA571 Delivers IcedID Forked Loader</title>
 <link>https://www.proofpoint.com/us/blog/threat-insight/security-brief-ta571-delivers-icedid-forked-loader</link>
 <guid>https://www.proofpoint.com/us/blog/threat-insight/security-brief-ta571-delivers-icedid-forked-loader</guid>
 <content:encoded><![CDATA[
-<div> TA571, IcedID, Forked variant, campaign, malware<br>
-<br>
-TA571, a spam distributor, launched two campaigns on 11 and 18 October 2023, delivering the Forked variant of IcedID to over 1,200 customers globally. The emails in the campaigns used thread hijacking and contained 404 TDS URLs linking to a password-protected zip archive. Upon opening the VBS script in the zip file, the IcedID Forked loader would run and download the IcedID bot, with the modified variant focusing on payload delivery instead of banking fraud. TA571 uses 404 TDS in their campaigns and is known for high-volume spam email delivery. The use of the Forked IcedID variant is unusual and indicates actor sophistication. Emerging Threats signatures have been identified for this threat, and several Indicators of Compromise have been listed for detection and mitigation purposes.<br><br>Summary: <br>TA571, a sophisticated spam distributor, delivered the Forked variant of IcedID in two campaigns impacting over 1,200 customers globally. The modified variant focuses on payload delivery instead of banking fraud. TA571 is known for using 404 TDS in their campaigns, and several indicators of compromise have been identified for this threat. <div>
+<div> TA571, IcedID, Forked variant, campaign, malware<br />
+<br />
+TA571, a spam distributor, launched two campaigns on 11 and 18 October 2023, delivering the Forked variant of IcedID to over 1,200 customers globally. The emails in the campaigns used thread hijacking and contained 404 TDS URLs linking to a password-protected zip archive. Upon opening the VBS script in the zip file, the IcedID Forked loader would run and download the IcedID bot, with the modified variant focusing on payload delivery instead of banking fraud. TA571 uses 404 TDS in their campaigns and is known for high-volume spam email delivery. The use of the Forked IcedID variant is unusual and indicates actor sophistication. Emerging Threats signatures have been identified for this threat, and several Indicators of Compromise have been listed for detection and mitigation purposes.<br /><br />Summary: <br />TA571, a sophisticated spam distributor, delivered the Forked variant of IcedID in two campaigns impacting over 1,200 customers globally. The modified variant focuses on payload delivery instead of banking fraud. TA571 is known for using 404 TDS in their campaigns, and several indicators of compromise have been identified for this threat. <div>
 What happened 
 
 Proofpoint researchers identified TA571 delivering the Forked variant of IcedID in two campaigns on 11 and 18 October 2023. Both campaigns included over 6,000 messages, each impacting over 1,200 customers in a variety of industries globally.  
@@ -243,7 +244,6 @@ Indicators of compromise 
 			11 October 2023
 ]]></content:encoded>
 <pubDate>Mon, 30 Oct 2023 07:40:00 -0700</pubDate>
-<pubDate>Mon, 30 Oct 2023 07:40:00 -0700</pubDate>
 </item>
 <item>
 <title>From Copacabana to Barcelona: The Cross-Continental Threat of Brazilian Banking Malware</title>
@@ -293,7 +293,6 @@ Conclusion 
 
 Given the rapid malware development and tenacity of threat actors in Latin America and South America, we expect to see an increase in targets of opportunity outside that region who share a common language. As the global supply chain continues to evolve and rely on suppliers around the world, the targeting of organizations outside of a company’s normal service region will continue to be an increasing threat to all organizations worldwide.
 ]]></content:encoded>
-<pubDate>Mon, 23 Oct 2023 05:00:00 -0700</pubDate>
 <pubDate>Mon, 23 Oct 2023 05:00:00 -0700</pubDate>
 </item>
 <item>
@@ -507,14 +506,12 @@ Emerging Threats Signatures: (All Open Sigs available for free) 
 “ET EXPLOIT_KIT ZPHP Domain in (DNS Lookup/TLS SNI) ()”
 ]]></content:encoded>
 <pubDate>Tue, 17 Oct 2023 05:00:21 -0700</pubDate>
-<pubDate>Tue, 17 Oct 2023 05:00:21 -0700</pubDate>
 </item>
 <item>
 <title>ZenRAT: Malware Brings More Chaos Than Calm</title>
 <link>https://www.proofpoint.com/us/blog/threat-insight/zenrat-malware-brings-more-chaos-calm</link>
 <guid>https://www.proofpoint.com/us/blog/threat-insight/zenrat-malware-brings-more-chaos-calm</guid>
 <content:encoded><![CDATA[
-
 Key Takeaways 
 
 Proofpoint identified a new malware called ZenRAT being distributed via fake installation packages of the password manager Bitwarden. 
@@ -949,14 +946,12 @@ Acknowledgements  
 We would like to thank Jérôme Segura, Senior Director of Threat Intelligence at Malwarebytes for his discovery of and collaboration on this threat.
 ]]></content:encoded>
 <pubDate>Tue, 26 Sep 2023 05:00:51 -0700</pubDate>
-<pubDate>Tue, 26 Sep 2023 05:00:51 -0700</pubDate>
 </item>
 <item>
 <title>Chinese Malware Appears in Earnest Across Cybercrime Threat Landscape</title>
 <link>https://www.proofpoint.com/us/blog/threat-insight/chinese-malware-appears-earnest-across-cybercrime-threat-landscape</link>
 <guid>https://www.proofpoint.com/us/blog/threat-insight/chinese-malware-appears-earnest-across-cybercrime-threat-landscape</guid>
 <content:encoded><![CDATA[
-
 Key Takeaways
 
 Proofpoint has observed an increase in activity from specific malware families targeting Chinese-language speakers.
@@ -1373,14 +1368,12 @@ Example IOCs
 			Jun-23
 ]]></content:encoded>
 <pubDate>Wed, 20 Sep 2023 05:00:00 -0700</pubDate>
-<pubDate>Wed, 20 Sep 2023 05:00:00 -0700</pubDate>
 </item>
 <item>
 <title>Out of the Sandbox: WikiLoader Digs Sophisticated Evasion</title>
 <link>https://www.proofpoint.com/us/blog/threat-insight/out-sandbox-wikiloader-digs-sophisticated-evasion</link>
 <guid>https://www.proofpoint.com/us/blog/threat-insight/out-sandbox-wikiloader-digs-sophisticated-evasion</guid>
 <content:encoded><![CDATA[
-
 Key Takeaways
 
 Proofpoint identified a new malware we call WikiLoader.
@@ -2062,14 +2055,12 @@ IOCS
 			December 2022
 ]]></content:encoded>
 <pubDate>Mon, 31 Jul 2023 05:00:47 -0700</pubDate>
-<pubDate>Mon, 31 Jul 2023 05:00:47 -0700</pubDate>
 </item>
 <item>
 <title>Job Scams Using Bioscience Lures Target Universities</title>
 <link>https://www.proofpoint.com/us/blog/threat-insight/job-scams-using-bioscience-lures-target-universities</link>
 <guid>https://www.proofpoint.com/us/blog/threat-insight/job-scams-using-bioscience-lures-target-universities</guid>
 <content:encoded><![CDATA[
-
 Key Takeaways
 
 Proofpoint identified a series of campaigns using fraudulent job offers to target university students.
@@ -2274,14 +2265,12 @@ Indicator
 			Spoofed domain used for employment fraud
 ]]></content:encoded>
 <pubDate>Wed, 19 Jul 2023 05:00:00 -0700</pubDate>
-<pubDate>Wed, 19 Jul 2023 05:00:00 -0700</pubDate>
 </item>
 <item>
 <title>Welcome to New York: Exploring TA453's Foray into LNKs and Mac Malware</title>
 <link>https://www.proofpoint.com/us/blog/threat-insight/welcome-new-york-exploring-ta453s-foray-lnks-and-mac-malware</link>
 <guid>https://www.proofpoint.com/us/blog/threat-insight/welcome-new-york-exploring-ta453s-foray-lnks-and-mac-malware</guid>
 <content:encoded><![CDATA[
-
 */
 
 /*-->*/
@@ -2575,14 +2564,12 @@ ET Signatures
 Proofpoint appreciates the analytic assistance from Dropbox and HSBC Cyber Intelligence and Threat Analysis during this investigation.
 ]]></content:encoded>
 <pubDate>Thu, 06 Jul 2023 05:00:00 -0700</pubDate>
-<pubDate>Thu, 06 Jul 2023 05:00:00 -0700</pubDate>
 </item>
 <item>
 <title>Cybercrime Targeting Italy</title>
 <link>https://www.proofpoint.com/us/blog/threat-insight/cybercrime-targeting-italy</link>
 <guid>https://www.proofpoint.com/us/blog/threat-insight/cybercrime-targeting-italy</guid>
 <content:encoded><![CDATA[
-
 Download full report (PDF)
 
 Global Threat Landscape 
@@ -2611,14 +2598,12 @@ Actors across the threat landscape, including those targeting Italian users, are
 To read more about threat actors targeting Italy, please download the full report here.
 ]]></content:encoded>
 <pubDate>Wed, 21 Jun 2023 05:00:21 -0700</pubDate>
-<pubDate>Wed, 21 Jun 2023 05:00:21 -0700</pubDate>
 </item>
 <item>
 <title>The 2023 Human Factor Report Analyzes Threats in the Cyber Attack Chain</title>
 <link>https://www.proofpoint.com/us/blog/threat-insight/2023-human-factor-analyzes-evolving-threats-attack-chain</link>
 <guid>https://www.proofpoint.com/us/blog/threat-insight/2023-human-factor-analyzes-evolving-threats-attack-chain</guid>
 <content:encoded><![CDATA[
-
 In the latest edition of our Human Factor report, launching today, we take our closest ever look at developments in the cyber attack chain. After two years of pandemic-induced disruption, many parts of the world have returned to something close to business as usual. And for cyber criminals, that means getting back to innovating, iterating and broadening their range of attacks.
 
 Drawing on one of the largest data sets in cybersecurity and insights from our global team of researchers, Human Factor 2023 explores a year of extremes. Highly complex techniques became commoditized, but some of the biggest individual losses arose from nothing more than a friendly, persuasive conversation. As usual, we view all of this through a people-centric lens, looking at the social engineering tactics attackers used to undermine defenses.
@@ -2656,8 +2641,6 @@ Every day, Proofpoint analyzes billions of email messages, URLs and attachments 
 To read more of their insights, download the full report.
 ]]></content:encoded>
 <pubDate>Wed, 14 Jun 2023 05:00:00 -0700</pubDate>
-<pubDate>Wed, 14 Jun 2023 05:00:00 -0700</pubDate>
 </item>
-
 </channel>
 </rss>

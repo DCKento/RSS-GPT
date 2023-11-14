@@ -4,6 +4,7 @@
 <title>Cyber Threat Alert</title>
 <link>https://www.cisecurity.org/feed/alert</link>
 
+
 <item>
 <title>Threat Level - GUARDED</title>
 <link>https://www.cisecurity.org/cybersecurity-threats</link>
@@ -13,12 +14,10 @@
 
 Summary:
 The Cyber Threat Alert Level remains at Blue (Guarded) due to vulnerabilities in Google and Atlassian products. The MS-ISAC released advisories for multiple vulnerabilities in Google Chrome and Atlassian Confluence Server and Data Center, as well as for multiple vulnerabilities in Google Android OS. These vulnerabilities pose significant risks, including arbitrary code execution, data destruction, and privilege escalation. Organizations and users are strongly advised to update and apply all appropriate vendor security patches to vulnerable systems and to maintain daily antivirus signature updates. Additionally, user awareness training regarding the threats posed by email attachments and hypertext links, particularly from un-trusted sources, is crucial in defending against potential cyber threats.
-<br><br> <div>
+<br /><br /> <div>
 On November 8, the Cyber Threat Alert Level was evaluated and is remaining at Blue (Guarded) due to vulnerabilities in Google and Atlassian products. On November 3, the MS-ISAC released two advisories. The first advisory was for multiple vulnerabilities in Google Chrome, the most severe of which could allow for arbitrary code execution. The second advisory was for a vulnerability in Atlassian Confluence Server and Data Center that could allow for data destruction. On November 7, the MS-ISAC released an advisory for multiple vulnerabilities in Google Android OS, the most severe of which could allow for privilege escalation. Organizations and users are advised to update and apply all appropriate vendor security patches to vulnerable systems and to continue to update their antivirus signatures daily. Another line of defense includes user awareness training regarding the threats posed by attachments and hypertext links contained in emails especially from un-trusted sources.
 ]]></content:encoded>
 <pubDate>Wed, 08 Nov 2023 09:07:49 Z</pubDate>
-<pubDate>Wed, 08 Nov 2023 09:07:49 Z</pubDate>
 </item>
-
 </channel>
 </rss>

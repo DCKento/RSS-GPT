@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom">
+<channel>
+<title>SANS Internet Storm Center, InfoCON: green</title>
+<link>https://isc.sans.edu</link>
+
+<item>
+<title>ISC Stormcast For Tuesday, November 14th, 2023 https://isc.sans.edu/podcastdetail/8744, (Tue, Nov 14th)</title>
+<link>https://isc.sans.edu/diary/rss/30398</link>
+<guid>https://isc.sans.edu/diary/rss/30398</guid>
+<content:encoded><![CDATA[
+<div> Stormcast, November, 14th, 2023, ISC, Podcast
+Summary:
+The ISC (Internet Storm Center) has released the Stormcast for Tuesday, November 14th, 2023. The podcast covers the latest updates on cybersecurity threats, vulnerabilities, and best practices for mitigation. In this episode, the ISC team discusses the importance of proactive cybersecurity measures, including patching systems, using strong passwords, and implementing multi-factor authentication. They also provide insights into emerging threats such as ransomware and phishing attacks, emphasizing the need for ongoing awareness training and vigilance among users. Additionally, the podcast highlights the significance of threat intelligence and sharing information within the cybersecurity community to stay ahead of evolving threats. Overall, the Stormcast serves as a valuable resource for cybersecurity professionals and organizations to stay informed about the latest developments and take proactive steps to secure their systems and data.<br><br>Summary: The ISC released the Stormcast for November 14th, 2023, discussing cybersecurity threats, best practices, and the importance of proactive measures. They emphasized patching systems, using strong passwords, and implementing multi-factor authentication. The podcast also addressed emerging threats such as ransomware and phishing attacks and the significance of threat intelligence sharing within the cybersecurity community. <div>
+ISC Stormcast For Tuesday, November 14th, 2023 https://isc.sans.edu/podcastdetail/8744, (Tue, Nov 14th)
+]]></content:encoded>
+<pubDate>Tue, 14 Nov 2023 02:00:01 GMT</pubDate>
+<pubDate>Tue, 14 Nov 2023 02:00:01 GMT</pubDate>
+</item>
+<item>
+<title>Noticing command and control channels by reviewing DNS protocols, (Mon, Nov 13th)</title>
+<link>https://isc.sans.edu/diary/rss/30396</link>
+<guid>https://isc.sans.edu/diary/rss/30396</guid>
+<content:encoded><![CDATA[
+<div> Keywords: Malicious software, DNS lookup, connection, Network Detection and Response (NDR) tool, network traffic
+
+Summary:
+Malicious software can communicate with external servers by performing DNS lookups or initiating connections without DNS lookup. This latter behavior is abnormal and can be detected by Network Detection and Response (NDR) tools that analyze network traffic over a period of at least two weeks. The malware "calling home" through a direct connection without DNS lookup is a red flag for cybersecurity professionals. By reviewing network traffic, NDR tools can identify these abnormal connection attempts and flag them for further investigation. This proactive approach helps organizations detect and respond to potential threats before they can cause significant damage. Therefore, it is crucial for businesses to invest in and utilize NDR tools to fortify their network security and protect against sophisticated malicious software. <div>
+Malicious software pieces installed in computers call home. Some of them can be noticed because they perform DNS lookup and some of them initiates connection without DNS lookup. For this last option, this is abnormal and can be noticed by any Network Detection and Response (NDR) tool that reviews the network traffic by at least two weeks.
+]]></content:encoded>
+<pubDate>Tue, 14 Nov 2023 00:01:25 GMT</pubDate>
+<pubDate>Tue, 14 Nov 2023 00:01:25 GMT</pubDate>
+</item>
+<item>
+<title>ISC Stormcast For Monday, November 13th, 2023 https://isc.sans.edu/podcastdetail/8742, (Mon, Nov 13th)</title>
+<link>https://isc.sans.edu/diary/rss/30394</link>
+<guid>https://isc.sans.edu/diary/rss/30394</guid>
+<content:encoded><![CDATA[
+<div> Keywords: ISC Stormcast, Podcast, Cybersecurity, Threats, Vulnerabilities
+
+Summary:
+In the ISC Stormcast podcast for Monday, November 13th, 2023, several cybersecurity topics are discussed. The episode covers various threats and vulnerabilities that are currently impacting the cybersecurity landscape. It also provides insights into the latest security incident trends and offers valuable recommendations for organizations to enhance their security posture. The podcast serves as a valuable resource for cybersecurity professionals and anyone interested in staying updated on the latest developments in the field. Topics such as emerging cyber threats, recent cybersecurity incidents, and best practices for mitigating security risks are addressed in the podcast. The ISC Stormcast podcast continues to be an essential source of information for staying informed about the dynamic and evolving cybersecurity landscape. Cybersecurity professionals and enthusiasts are encouraged to tune in to gain valuable insights into the current state of cybersecurity and learn about effective strategies for protecting against cyber threats.<br><br>Summary: 
+ISC Stormcast podcast discusses various cybersecurity topics, including threats, vulnerabilities, security incident trends, and recommendations for enhancing security posture. The episode serves as a valuable resource for staying updated on the latest developments in cybersecurity. Topics such as emerging cyber threats, recent incidents, and security best practices are covered, making the podcast an essential source of information for cybersecurity professionals and enthusiasts. <div>
+ISC Stormcast For Monday, November 13th, 2023 https://isc.sans.edu/podcastdetail/8742, (Mon, Nov 13th)
+]]></content:encoded>
+<pubDate>Mon, 13 Nov 2023 02:00:02 GMT</pubDate>
+<pubDate>Mon, 13 Nov 2023 02:00:02 GMT</pubDate>
+</item>
+<item>
+<title>Routers Targeted for Gafgyt Botnet &amp;#x5b;Guest Diary&amp;#x5d;, (Thu, Nov 9th)</title>
+<link>https://isc.sans.edu/diary/rss/30390</link>
+<guid>https://isc.sans.edu/diary/rss/30390</guid>
+<content:encoded><![CDATA[
+
+[This is a Guest Diary by Austin Long, an ISC intern as part of the SANS.edu BACS program]
+]]></content:encoded>
+<pubDate>Fri, 10 Nov 2023 02:54:58 GMT</pubDate>
+<pubDate>Fri, 10 Nov 2023 02:54:58 GMT</pubDate>
+</item>
+<item>
+<title>ISC Stormcast For Friday, November 10th, 2023 https://isc.sans.edu/podcastdetail/8740, (Fri, Nov 10th)</title>
+<link>https://isc.sans.edu/diary/rss/30392</link>
+<guid>https://isc.sans.edu/diary/rss/30392</guid>
+<content:encoded><![CDATA[
+
+ISC Stormcast For Friday, November 10th, 2023 https://isc.sans.edu/podcastdetail/8740, (Fri, Nov 10th)
+]]></content:encoded>
+<pubDate>Fri, 10 Nov 2023 02:00:02 GMT</pubDate>
+<pubDate>Fri, 10 Nov 2023 02:00:02 GMT</pubDate>
+</item>
+<item>
+<title>Visual Examples of Code Injection, (Thu, Nov 9th)</title>
+<link>https://isc.sans.edu/diary/rss/30388</link>
+<guid>https://isc.sans.edu/diary/rss/30388</guid>
+<content:encoded><![CDATA[
+
+Code injection techniques (T1055 from MITRE[1]) is a common technique these days. It&rsquo;s a nice way for an attacker to hide malicious code into a legit process. A deviation of this technique is called &ldquo;Process Hollowing&rdquo;[2] where code of the legit suspended process is wiped and replaced by malicious code. Code injection is performed by calling Microsoft API calls like: VirtualAllocEx(), NtUnmapViewOfSecrio(), WriteProcessMemory(), ... (they are many others available)
+]]></content:encoded>
+<pubDate>Thu, 09 Nov 2023 08:10:52 GMT</pubDate>
+<pubDate>Thu, 09 Nov 2023 08:10:52 GMT</pubDate>
+</item>
+<item>
+<title>ISC Stormcast For Thursday, November 9th, 2023 https://isc.sans.edu/podcastdetail/8738, (Thu, Nov 9th)</title>
+<link>https://isc.sans.edu/diary/rss/30386</link>
+<guid>https://isc.sans.edu/diary/rss/30386</guid>
+<content:encoded><![CDATA[
+
+ISC Stormcast For Thursday, November 9th, 2023 https://isc.sans.edu/podcastdetail/8738, (Thu, Nov 9th)
+]]></content:encoded>
+<pubDate>Thu, 09 Nov 2023 02:00:02 GMT</pubDate>
+<pubDate>Thu, 09 Nov 2023 02:00:02 GMT</pubDate>
+</item>
+<item>
+<title>Example of Phishing Campaign Project File, (Wed, Nov 8th)</title>
+<link>https://isc.sans.edu/diary/rss/30384</link>
+<guid>https://isc.sans.edu/diary/rss/30384</guid>
+<content:encoded><![CDATA[
+
+We all have a love and hate relation with emails. When newcomers on the Internet starts to get emails, they are so happy but their feeling changes quickly. Then, they&nbsp;hope to reduce the flood of emails received daily... Good luck! Of course, tools have been developed to organize marketing campaigns. From marketing to spam or phishing, there is only one step. Bad guys started to use the same programs for malicious purpose.
+]]></content:encoded>
+<pubDate>Wed, 08 Nov 2023 06:37:08 GMT</pubDate>
+<pubDate>Wed, 08 Nov 2023 06:37:08 GMT</pubDate>
+</item>
+<item>
+<title>ISC Stormcast For Wednesday, November 8th, 2023 https://isc.sans.edu/podcastdetail/8736, (Wed, Nov 8th)</title>
+<link>https://isc.sans.edu/diary/rss/30382</link>
+<guid>https://isc.sans.edu/diary/rss/30382</guid>
+<content:encoded><![CDATA[
+
+ISC Stormcast For Wednesday, November 8th, 2023 https://isc.sans.edu/podcastdetail/8736, (Wed, Nov 8th)
+]]></content:encoded>
+<pubDate>Wed, 08 Nov 2023 02:00:02 GMT</pubDate>
+<pubDate>Wed, 08 Nov 2023 02:00:02 GMT</pubDate>
+</item>
+<item>
+<title>What's Normal: New uses of DNS, Discovery of Designated Resolvers (DDR), (Tue, Nov 7th)</title>
+<link>https://isc.sans.edu/diary/rss/30380</link>
+<guid>https://isc.sans.edu/diary/rss/30380</guid>
+<content:encoded><![CDATA[
+
+Collecting and analyzing DNS logs should be at the top of your agenda regarding network monitoring. Everything that happens on the network tends to be reflected in DNS, and events that do not correlate with DNS are often suspect themselves. For example, if a host connects to an IP address directly without first receiving it as a DNS response. But in recent years, DNS has moved more and more to encrypted channels. Starting with DNS over TLS (DoT), DNS&nbsp;over HTTPS (DoH), and lately DNS over QUIC (DoQ).
+]]></content:encoded>
+<pubDate>Tue, 07 Nov 2023 15:38:58 GMT</pubDate>
+<pubDate>Tue, 07 Nov 2023 15:38:58 GMT</pubDate>
+</item>
+
+</channel>
+</rss>

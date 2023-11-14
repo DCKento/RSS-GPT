@@ -5,3 +5,25 @@ Fetching from http://isc.sans.org/rssfeed.xml
 Feed error: 301
 append_entries: 0
 error when rendering xml, skip docs/SANS_Internet_Storm_Center
+------------------------------------------------------
+Started: 2023-11-14 04:14:40.228480
+Existing_entries: 0
+Fetching from https://isc.sans.edu/rssfeed.xml
+Token length: 103
+Summarized using GPT-3.5-turbo-1106
+Append: [ISC Stormcast For Tuesday, November 14th, 2023 https://isc.sans.edu/podcastdetail/8744, (Tue, Nov 14th)](https://isc.sans.edu/diary/rss/30398)
+Token length: 340
+Summarized using GPT-3.5-turbo-1106
+Append: [Noticing command and control channels by reviewing DNS protocols, (Mon, Nov 13th)](https://isc.sans.edu/diary/rss/30396)
+Token length: 102
+Summarized using GPT-3.5-turbo-1106
+Append: [ISC Stormcast For Monday, November 13th, 2023 https://isc.sans.edu/podcastdetail/8742, (Mon, Nov 13th)](https://isc.sans.edu/diary/rss/30394)
+Append: [Routers Targeted for Gafgyt Botnet &#x5b;Guest Diary&#x5d;, (Thu, Nov 9th)](https://isc.sans.edu/diary/rss/30390)
+Append: [ISC Stormcast For Friday, November 10th, 2023 https://isc.sans.edu/podcastdetail/8740, (Fri, Nov 10th)](https://isc.sans.edu/diary/rss/30392)
+Append: [Visual Examples of Code Injection, (Thu, Nov 9th)](https://isc.sans.edu/diary/rss/30388)
+Append: [ISC Stormcast For Thursday, November 9th, 2023 https://isc.sans.edu/podcastdetail/8738, (Thu, Nov 9th)](https://isc.sans.edu/diary/rss/30386)
+Append: [Example of Phishing Campaign Project File, (Wed, Nov 8th)](https://isc.sans.edu/diary/rss/30384)
+Append: [ISC Stormcast For Wednesday, November 8th, 2023 https://isc.sans.edu/podcastdetail/8736, (Wed, Nov 8th)](https://isc.sans.edu/diary/rss/30382)
+Append: [What's Normal: New uses of DNS, Discovery of Designated Resolvers (DDR), (Tue, Nov 7th)](https://isc.sans.edu/diary/rss/30380)
+append_entries: 10
+Finish: 2023-11-14 04:14:48.618049

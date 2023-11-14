@@ -5,3 +5,10 @@ Fetching from http://www.us-cert.gov/channels/alerts.rdf
 Feed error: 301
 append_entries: 0
 error when rendering xml, skip docs/US_CERT_Cyber_Security_Alerts
+------------------------------------------------------
+Started: 2023-11-14 04:14:29.489811
+Existing_entries: 0
+Fetching from http://www.us-cert.gov/channels/alerts.rdf
+Feed error: 301
+append_entries: 0
+error when rendering xml, skip docs/US_CERT_Cyber_Security_Alerts
